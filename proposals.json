@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-033",
+      "client": "Os Ali Services",
+      "filename": "os-ali-services-FR-2026-033",
+      "host": "proposals",
+      "category": "cleaning"
+    },
+    {
       "ref": "FR-2026-032",
       "client": "Kotak",
       "filename": "kotak-FR-2026-032",
