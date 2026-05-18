@@ -1,0 +1,284 @@
+{
+  "proposals": [
+    {
+      "ref": "FR-2026-001",
+      "client": "Kotak Design",
+      "filename": "kotak-design-FR-2026-001",
+      "host": "proposals",
+      "category": "installation"
+    },
+    {
+      "ref": "FR-2026-002",
+      "client": "Kotak Design",
+      "filename": "kotak-design-FR-2026-002",
+      "host": "proposals",
+      "category": "installation"
+    },
+    {
+      "ref": "FR-2026-003",
+      "client": "Castle Cinema",
+      "filename": "castle-cinema-FR-2026-003",
+      "host": "proposals",
+      "category": "installation"
+    },
+    {
+      "ref": "FR-2026-004",
+      "client": "The Libertine",
+      "filename": "the-libertine-FR-2026-004",
+      "host": "proposals",
+      "category": "installation"
+    },
+    {
+      "ref": "FR-2026-005",
+      "client": "Wok to Walk",
+      "filename": "wok-to-walk-FR-2026-005",
+      "host": "proposals",
+      "category": "fan-services"
+    },
+    {
+      "ref": "FR-2026-006",
+      "client": "Olle",
+      "filename": "olle-FR-2026-006",
+      "host": "proposals",
+      "category": "me-design"
+    },
+    {
+      "ref": "FR-2026-007",
+      "client": "Fatto a Mano",
+      "filename": "fatto-a-mano-FR-2026-007",
+      "host": "proposals",
+      "category": "installation"
+    },
+    {
+      "ref": "FR-2026-007",
+      "client": "Bella's Kitchen",
+      "filename": "bellas-kitchen-FR-2026-007",
+      "host": "proposals",
+      "category": "installation"
+    },
+    {
+      "ref": "FR-2026-008",
+      "client": "Adelphi Capital",
+      "filename": "adelphi-capital-FR-2026-008",
+      "host": "proposals",
+      "category": "installation"
+    },
+    {
+      "ref": "FR-2026-009",
+      "client": "Well Square",
+      "filename": "well-square-FR-2026-009",
+      "host": "proposals",
+      "category": "installation"
+    },
+    {
+      "ref": "FR-2026-010",
+      "client": "Planit Studio",
+      "filename": "planit-studio-FR-2026-010",
+      "host": "proposals",
+      "category": "odour-risk"
+    },
+    {
+      "ref": "FR-2026-011",
+      "client": "St Vincent's",
+      "filename": "st-vincents-FR-2026-011",
+      "host": "proposals",
+      "category": "fan-services"
+    },
+    {
+      "ref": "FR-2026-012",
+      "client": "Fratelli Italian",
+      "filename": "fratelli-italian-FR-2026-012",
+      "host": "proposals",
+      "category": "cleaning"
+    },
+    {
+      "ref": "FR-2026-013",
+      "client": "Hayes RFC",
+      "filename": "hayes-rfc-FR-2026-013",
+      "host": "proposals",
+      "category": "cleaning"
+    },
+    {
+      "ref": "FR-2026-014",
+      "client": "Hole in the Wall",
+      "filename": "hole-in-the-wall-FR-2026-014",
+      "host": "proposals",
+      "category": "fan-services"
+    },
+    {
+      "ref": "FR-2026-014",
+      "client": "Fusion Music",
+      "filename": "fusion-music-FR-2026-014",
+      "host": "proposals",
+      "category": "installation"
+    },
+    {
+      "ref": "FR-2026-014",
+      "client": "Jones Family Kitchen",
+      "filename": "jones-family-kitchen-FR-2026-014",
+      "host": "proposals",
+      "category": "cleaning"
+    },
+    {
+      "ref": "FR-2026-014",
+      "client": "Brazilian Chaplaincy",
+      "filename": "brazilian-chaplaincy-FR-2026-014",
+      "host": "proposals",
+      "category": "cleaning"
+    },
+    {
+      "ref": "FR-2026-015",
+      "client": "Amma Atta",
+      "filename": "amma-atta-FR-2026-015",
+      "host": "proposals",
+      "category": "installation"
+    },
+    {
+      "ref": "FR-2026-015",
+      "client": "Chaiiwala Mitsuryu",
+      "filename": "chaiiwala-mitsuryu-FR-2026-015",
+      "host": "proposals",
+      "category": "cleaning"
+    },
+    {
+      "ref": "FR-2026-016",
+      "client": "The Woodman",
+      "filename": "the-woodman-FR-2026-016",
+      "host": "proposals",
+      "category": "cleaning"
+    },
+    {
+      "ref": "FR-2026-017",
+      "client": "Nishad 380 Kenton",
+      "filename": "nishad-380-kenton-FR-2026-017",
+      "host": "proposals",
+      "category": "installation"
+    },
+    {
+      "ref": "FR-2026-018",
+      "client": "Barshu",
+      "filename": "barshu-FR-2026-018",
+      "host": "proposals",
+      "category": "cleaning"
+    },
+    {
+      "ref": "FR-2026-019",
+      "client": "Li Group",
+      "filename": "li-group-FR-2026-019",
+      "host": "proposals",
+      "category": "installation"
+    },
+    {
+      "ref": "FR-2026-020",
+      "client": "Mr Francatelli",
+      "filename": "mr-francatelli-FR-2026-020",
+      "host": "proposals",
+      "category": "cleaning"
+    },
+    {
+      "ref": "FR-2026-021",
+      "client": "GGND Afghan Ekta",
+      "filename": "ggnd-afghan-ekta-FR-2026-021",
+      "host": "proposals",
+      "category": "cleaning"
+    },
+    {
+      "ref": "FR-2026-022",
+      "client": "Kudu Marylebone",
+      "filename": "kudu-marylebone-FR-2026-022",
+      "host": "proposals",
+      "category": "cleaning"
+    },
+    {
+      "ref": "FR-2026-023",
+      "client": "Eatviet",
+      "filename": "eatviet-FR-2026-023",
+      "host": "proposals",
+      "category": "installation"
+    },
+    {
+      "ref": "FR-2026-024",
+      "client": "Sakura",
+      "filename": "sakura-FR-2026-024",
+      "host": "proposals",
+      "category": "cleaning"
+    },
+    {
+      "ref": "FR-2026-025",
+      "client": "Angelina Whiteley",
+      "filename": "angelina-whiteley-FR-2026-025",
+      "host": "proposals",
+      "category": "installation"
+    },
+    {
+      "ref": "FR-2026-026",
+      "client": "Sushi Moka",
+      "filename": "sushi-moka-FR-2026-026",
+      "host": "proposals",
+      "category": "cleaning"
+    },
+    {
+      "ref": "FR-2026-026",
+      "client": "Olle Rubrics (Installation & Cleaning)",
+      "filename": "olle-rubrics-FR-2026-026",
+      "host": "proposals",
+      "category": "mixed"
+    },
+    {
+      "ref": "FR-2026-027",
+      "client": "Olle Rubrics (edited version)",
+      "filename": "olle-rubrics-FR-2026-027",
+      "host": "proposals",
+      "category": "mixed"
+    },
+    {
+      "ref": "FR-2026-028",
+      "client": "Gingham Kitchen",
+      "filename": "gingham-kitchen-FR-2026-028",
+      "host": "proposals",
+      "category": "cleaning"
+    },
+    {
+      "ref": "FR-2026-029",
+      "client": "Allen Hall Seminary",
+      "filename": "allen-hall-seminary-FR-2026-029",
+      "host": "proposals",
+      "category": "cleaning"
+    },
+    {
+      "ref": "FR-2026-030",
+      "client": "Barking Mosque",
+      "filename": "barking-mosque-FR-2026-030",
+      "host": "proposals",
+      "category": "installation"
+    },
+    {
+      "ref": "FR-2026-030",
+      "client": "Battersea Bloom",
+      "filename": "battersea-bloom-FR-2026-030",
+      "host": "proposals",
+      "category": "installation"
+    },
+    {
+      "ref": "FR-2026-031",
+      "client": "Samson Homes Ashby House",
+      "filename": "samson-homes-ashby-house-FR-2026-031",
+      "host": "proposals",
+      "category": "installation"
+    },
+    {
+      "ref": "FR-2026-031",
+      "client": "Muun",
+      "filename": "muun-FR-2026-031",
+      "host": "proposals",
+      "category": "installation"
+    },
+    {
+      "ref": "FR-2036",
+      "client": "Joy King Lau",
+      "filename": "joy-king-lau-FR-2036",
+      "host": "proposals",
+      "category": "cleaning"
+    }
+  ]
+}
