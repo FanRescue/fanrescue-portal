@@ -2,6 +2,13 @@
   "proposals": [
     {
       "ref": "FR-2026-033",
+      "client": "Hectors Fine Wine",
+      "filename": "hectors-fine-wine-FR-2026-033",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
+      "ref": "FR-2026-033",
       "client": "Os Ali Services",
       "filename": "os-ali-services-FR-2026-033",
       "host": "proposals",
