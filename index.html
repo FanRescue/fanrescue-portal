@@ -303,7 +303,7 @@ footer {
   <div class="heading">
     <div>
       <h1>Proposal Portal</h1>
-      <p>All live proposals across cleaning, installations, and fan replacements. Pulled live from GitHub. Click any row to open in a new tab.</p>
+      <p>All live proposals and quotes across every category. Click any row to open in a new tab.</p>
     </div>
     <div class="heading__total">Total live <strong id="total-count">—</strong></div>
   </div>
@@ -333,282 +333,148 @@ footer {
 
 <script>
 // ════════════════════════════════════════════════════════
-// PORTAL DATA LAYER
+// FAN RESCUE PORTAL — Data Layer
+//
+// The portal reads ONE file: proposals.json (in this repo).
+// That file is the source of truth for what proposals exist
+// and which category each one belongs to.
+//
+// Adding a new proposal:
+//   1. Push the HTML quote to proposals.fanrescue.co.uk or
+//      quotes.fanrescue.co.uk as normal.
+//   2. Add a new entry to proposals.json (one line). Push.
+//   3. Refresh the portal — done.
 // ════════════════════════════════════════════════════════
 
-// ════════════════════════════════════════════════════════
-// REPO SOURCES — both repos are scanned, files are then
-// classified by their hero badge content, not by repo.
-// ════════════════════════════════════════════════════════
-const REPOS = [
-  {
-    owner: 'FanRescue',
-    repo:  'fan-rescue-proposals',
-    host:  'https://proposals.fanrescue.co.uk'
-  },
-  {
-    owner: 'FanRescue',
-    repo:  'fanrescue-quotes',
-    host:  'https://quotes.fanrescue.co.uk'
-  }
-];
-
-// ════════════════════════════════════════════════════════
-// CATEGORIES — classification rules in priority order.
-// First rule whose `match` function returns true wins.
-// ════════════════════════════════════════════════════════
+// ─── Categories ─────────────────────────────────────────
+// The id values must match the "category" values in proposals.json.
 const CATEGORIES = [
-  {
-    id:    'fan-replacement',
-    label: 'Fan Replacement / Repair',
-    short: 'Fan Replacement',
-    match: badge => /fan\s*(replacement|repair)/i.test(badge)
-  },
-  {
-    id:    'installation',
-    label: 'Installations',
-    short: 'Installation',
-    match: badge => {
-      const b = badge.toUpperCase();
-      if (b.includes('INSTALLATION'))   return true;
-      if (b.includes('INDICATIVE'))     return true;
-      if (b.includes('VENTILATION') && b.includes('AIR CONDITIONING')) return true;
-      if (b.includes('M&E') || b.includes('M & E')) return true;
-      return false;
-    }
-  },
-  {
-    id:    'cleaning',
-    label: 'Cleaning Proposals',
-    short: 'Cleaning',
-    match: badge => {
-      const b = badge.toUpperCase();
-      return b.includes('CLEANING') || b.includes('TR19') || b.includes('SERVICE AGREEMENT');
-    }
-  },
-  {
-    id:    'uncategorised',
-    label: 'Uncategorised',
-    short: 'Other',
-    match: () => true     // catch-all — must be last
-  }
+  { id: 'cleaning',        label: 'Cleaning' },
+  { id: 'installation',    label: 'Installations' },
+  { id: 'fan-services',    label: 'Fan Services' },
+  { id: 'me-design',       label: 'M&E Design' },
+  { id: 'odour-risk',      label: 'Odour Risk Assessment' },
+  { id: 'mixed',           label: 'Mixed' },
+  { id: 'uncategorised',   label: 'Uncategorised' }
 ];
 
-function classify(badgeText) {
-  for (const cat of CATEGORIES) {
-    if (cat.match(badgeText || '')) return cat;
-  }
-  return CATEGORIES[CATEGORIES.length - 1];
+// ─── Hosts ──────────────────────────────────────────────
+// Map shorthand "host" values in proposals.json to full URLs.
+const HOSTS = {
+  proposals: 'https://proposals.fanrescue.co.uk',
+  quotes:    'https://quotes.fanrescue.co.uk'
+};
+
+// ─── Load the proposal list ─────────────────────────────
+async function loadProposals() {
+  // Cache-bust so updates to proposals.json show up fast
+  const r = await fetch('proposals.json?t=' + Date.now());
+  if (!r.ok) throw new Error(`Failed to load proposals.json (HTTP ${r.status})`);
+  const data = await r.json();
+  return data.proposals || [];
 }
 
-// Match files like:  burgrill-clapton-FR-2035.html
-//                    joy-king-lau-restaurant-FR-2036.html
-//                    battersea-bloom-FR-2026-030.html (legacy 6-digit ref format)
-const FILENAME_PATTERN = /^([a-z0-9-]+?)-(FR-\d{4}(?:-\d{3})?)\.html$/i;
-
-// Title-case a kebab slug
-function humaniseSlug(slug) {
-  return slug
-    .split('-')
-    .map(w => w.length > 2 ? w[0].toUpperCase() + w.slice(1) : w.toUpperCase())
-    .join(' ');
+// ─── Build a full quote URL from a record ───────────────
+function buildUrl(rec) {
+  const host = HOSTS[rec.host] || rec.host;
+  return `${host}/${rec.filename}`;
 }
 
-// Parse a filename into a record, or null if it doesn't match the pattern
-function parseFilename(name) {
-  const m = name.match(FILENAME_PATTERN);
-  if (!m) return null;
-  return {
-    filename: name,
-    slug:     m[1],
-    ref:      m[2].toUpperCase(),
-    client:   humaniseSlug(m[1]),
-    lastModified: null   // populated below from /commits
-  };
-}
-
-// Fetch the file list for a single repo and enrich each with:
-//   - lastModified  (from GitHub commits API)
-//   - badge         (from fetching the file's hero badge)
-//   - category      (derived from badge)
-async function fetchRepoFiles(cfg) {
-  const headers = { 'Accept': 'application/vnd.github+json' };
-
-  const contentsRes = await fetch(
-    `https://api.github.com/repos/${cfg.owner}/${cfg.repo}/contents/`,
-    { headers }
-  );
-
-  if (!contentsRes.ok) {
-    if (contentsRes.status === 403) throw new Error(`GitHub API rate limit reached. Try again in an hour.`);
-    if (contentsRes.status === 404) throw new Error(`Repository ${cfg.owner}/${cfg.repo} not found or private.`);
-    throw new Error(`GitHub returned ${contentsRes.status} for /contents/`);
-  }
-
-  const items = await contentsRes.json();
-  const records = items
-    .filter(item => item.type === 'file' && item.name.endsWith('.html'))
-    .map(item => {
-      const rec = parseFilename(item.name);
-      if (rec) {
-        rec.host = cfg.host;
-        rec.repo = cfg.repo;
-        rec.url  = `${cfg.host}/${rec.filename.replace(/\.html$/, '')}`;
-      }
-      return rec;
-    })
-    .filter(rec => rec !== null);
-
-  // Enrich each with commit date + hero badge in parallel
-  await Promise.all(records.map(async (rec) => {
-    // 1. Commit date — GitHub API
-    try {
-      const r = await fetch(
-        `https://api.github.com/repos/${cfg.owner}/${cfg.repo}/commits?path=${encodeURIComponent(rec.filename)}&per_page=1`,
-        { headers }
-      );
-      if (r.ok) {
-        const commits = await r.json();
-        if (commits.length && commits[0].commit && commits[0].commit.author) {
-          rec.lastModified = commits[0].commit.author.date;
-        }
-      }
-    } catch (e) { /* row will show "—" */ }
-
-    // 2. Hero badge — fetch from the live URL (no GitHub API call)
-    try {
-      const r = await fetch(rec.url + '.html', { cache: 'default' });
-      if (r.ok) {
-        // Read just enough to find the badge — first 8KB is plenty
-        const text = (await r.text()).slice(0, 8192);
-        const m = text.match(/<div\s+class="[^"]*fr-hero__badge[^"]*"[^>]*>([^<]+)<\/div>/i);
-        rec.badge = m ? m[1].trim() : '';
-      }
-    } catch (e) { rec.badge = ''; }
-
-    // 3. Classify
-    rec.category = classify(rec.badge);
-  }));
-
-  return records;
-}
-
-// Fetch all repos in parallel and merge
-async function fetchAllProposals() {
-  const results = await Promise.all(
-    REPOS.map(cfg => fetchRepoFiles(cfg).catch(err => ({ error: err.message, repo: cfg.repo })))
-  );
-
-  const allFiles = [];
-  const errors = [];
-  for (const r of results) {
-    if (r.error) errors.push(r);
-    else allFiles.push(...r);
-  }
-  return { files: allFiles, errors };
-}
-
-// Render the rows for one category into its panel
-function renderPanel(panelEl, records) {
-  if (records.length === 0) {
-    panelEl.innerHTML = `<div class="empty"><strong>Nothing here yet</strong>Once HTML files matching this category are pushed, they'll appear here.</div>`;
-    return;
-  }
-  panelEl.innerHTML = records.map(r => {
-    const dateLabel = r.lastModified ? formatRelativeDate(r.lastModified) : '—';
-    const searchKey = (r.client + ' ' + r.ref + ' ' + r.filename + ' ' + (r.badge || '')).toLowerCase();
-    return `
-    <a href="${r.url}" target="_blank" rel="noopener" class="row" data-search="${searchKey}">
-      <div class="row__ref">${r.ref}</div>
-      <div>
-        <div class="row__client">${r.client}</div>
-        <div class="row__filename">${r.filename}</div>
-      </div>
-      <div class="row__type">${dateLabel}</div>
-      <div class="row__action"><span class="row__open">Open ↗</span></div>
-    </a>
-  `;
-  }).join('');
-}
-
-// Format an ISO 8601 date as "3 days ago" / "2 weeks ago" / "15 May" / "May 2025"
-function formatRelativeDate(iso) {
-  const now = new Date();
-  const then = new Date(iso);
-  const diffMs = now - then;
-  const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
-
-  if (diffDays === 0) return 'Today';
-  if (diffDays === 1) return 'Yesterday';
-  if (diffDays < 7)   return diffDays === 1 ? '1 day ago' : `${diffDays} days ago`;
-  if (diffDays < 30) {
-    const weeks = Math.floor(diffDays / 7);
-    return weeks === 1 ? '1 week ago' : `${weeks} weeks ago`;
-  }
-
-  const sameYear = then.getFullYear() === now.getFullYear();
-  const opts = sameYear
-    ? { day: 'numeric', month: 'short' }
-    : { month: 'short', year: 'numeric' };
-  return then.toLocaleDateString('en-GB', opts);
-}
-
-// Sort by commit date descending (truly newest first).
-// Files without a known date fall to the bottom, sorted by ref string.
-function sortByDateDesc(records) {
-  return records.sort((a, b) => {
-    if (a.lastModified && b.lastModified) {
-      return new Date(b.lastModified) - new Date(a.lastModified);
-    }
-    if (a.lastModified) return -1;
-    if (b.lastModified) return 1;
-    return b.ref.localeCompare(a.ref);
-  });
+// ─── Sort key (newest first) ────────────────────────────
+// FR-NNNN          → 2026 era, key = 20260000 + NNNN
+// FR-YYYY-NNN      → year explicit, key = YYYY * 1000 + NNN
+function refSortKey(ref) {
+  const legacy = ref.match(/^FR-(\d{4})-(\d{3})$/);
+  if (legacy) return parseInt(legacy[1], 10) * 1000 + parseInt(legacy[2], 10);
+  const modern = ref.match(/^FR-(\d{4})$/);
+  if (modern) return 2026 * 1000 + parseInt(modern[1], 10);
+  return 0;
 }
 
 // ════════════════════════════════════════════════════════
 // UI
 // ════════════════════════════════════════════════════════
 
-// Tab display order — different from match priority.
-// Match priority puts most-specific rules first (Fan Replacement),
-// but the UI shows the most-common category first (Cleaning).
-const TAB_ORDER = ['cleaning', 'installation', 'fan-replacement', 'uncategorised'];
+const TAB_ORDER = ['cleaning', 'installation', 'fan-services', 'me-design', 'odour-risk', 'mixed', 'uncategorised'];
 
-// Build the tabs + panels DOM from the categories present in the data
-function buildUi(grouped, errors) {
+function groupByCategory(records) {
+  const out = {};
+  CATEGORIES.forEach(c => out[c.id] = []);
+  records.forEach(r => {
+    const id = (r.category && out[r.category]) ? r.category : 'uncategorised';
+    out[id].push(r);
+  });
+  return out;
+}
+
+function renderPanel(panelEl, records) {
+  if (records.length === 0) {
+    panelEl.innerHTML = `<div class="empty"><strong>Nothing here yet</strong>Add proposals to proposals.json to populate this tab.</div>`;
+    return;
+  }
+  panelEl.innerHTML = records.map(r => {
+    const url       = buildUrl(r);
+    const searchKey = (r.client + ' ' + r.ref + ' ' + r.filename).toLowerCase();
+    const sideLabel = r.date
+      ? formatRelativeDate(r.date)
+      : (r.host === 'quotes' ? 'quotes.*' : 'proposals.*');
+    return `
+    <a href="${url}" target="_blank" rel="noopener" class="row" data-search="${searchKey}">
+      <div class="row__ref">${r.ref}</div>
+      <div>
+        <div class="row__client">${r.client}</div>
+        <div class="row__filename">${r.filename}</div>
+      </div>
+      <div class="row__type">${sideLabel}</div>
+      <div class="row__action"><span class="row__open">Open ↗</span></div>
+    </a>`;
+  }).join('');
+}
+
+function formatRelativeDate(iso) {
+  const now = new Date(), then = new Date(iso);
+  if (isNaN(then.getTime())) return iso;
+  const diffDays = Math.floor((now - then) / 86400000);
+  if (diffDays === 0)  return 'Today';
+  if (diffDays === 1)  return 'Yesterday';
+  if (diffDays < 7)    return `${diffDays} days ago`;
+  if (diffDays < 30)   {
+    const weeks = Math.floor(diffDays / 7);
+    return weeks === 1 ? '1 week ago' : `${weeks} weeks ago`;
+  }
+  const sameYear = then.getFullYear() === now.getFullYear();
+  return then.toLocaleDateString('en-GB', sameYear ? { day: 'numeric', month: 'short' } : { month: 'short', year: 'numeric' });
+}
+
+function sortByDateDesc(records) {
+  return records.sort((a, b) => {
+    // Prefer explicit date, fall back to ref sort key
+    if (a.date && b.date) {
+      const d = new Date(b.date) - new Date(a.date);
+      if (d !== 0) return d;
+    }
+    return refSortKey(b.ref) - refSortKey(a.ref);
+  });
+}
+
+function buildUi(grouped) {
   const tabsContainer   = document.getElementById('tabs');
   const panelsContainer = document.getElementById('panels');
-
-  tabsContainer.innerHTML = '';
+  tabsContainer.innerHTML   = '';
   panelsContainer.innerHTML = '';
 
-  // Render error banner if any repo failed
-  if (errors.length) {
-    const banner = document.createElement('div');
-    banner.className = 'error';
-    banner.innerHTML = errors.map(e =>
-      `<strong>Couldn't load ${e.repo}</strong><p>${e.error}<br>Repo: <code>FanRescue/${e.repo}</code></p>`
-    ).join('');
-    panelsContainer.appendChild(banner);
-  }
-
-  // Only render tabs for categories that actually have files, in TAB_ORDER
-  const visibleCategories = TAB_ORDER
+  const visible = TAB_ORDER
     .map(id => CATEGORIES.find(c => c.id === id))
     .filter(cat => cat && (grouped[cat.id] || []).length > 0);
 
-  if (visibleCategories.length === 0) {
+  if (visible.length === 0) {
     panelsContainer.insertAdjacentHTML('beforeend',
-      `<div class="panel"><div class="empty"><strong>No proposals yet</strong>Push HTML files to either repo and they'll appear here.</div></div>`
-    );
+      `<div class="panel"><div class="empty"><strong>No proposals yet</strong>Add entries to proposals.json and refresh.</div></div>`);
     return;
   }
 
-  visibleCategories.forEach((cat, i) => {
+  visible.forEach((cat, i) => {
     const records = sortByDateDesc(grouped[cat.id]);
-
-    // Tab
     const tab = document.createElement('button');
     tab.className = 'tab' + (i === 0 ? ' tab--active' : '');
     tab.dataset.tab = cat.id;
@@ -616,7 +482,6 @@ function buildUi(grouped, errors) {
     tab.addEventListener('click', () => switchTab(cat.id));
     tabsContainer.appendChild(tab);
 
-    // Panel
     const panel = document.createElement('div');
     panel.className = 'panel' + (i === 0 ? '' : ' panel--hidden');
     panel.id = 'panel-' + cat.id;
@@ -624,7 +489,6 @@ function buildUi(grouped, errors) {
     renderPanel(panel, records);
   });
 
-  // Update header total
   const total = Object.values(grouped).reduce((sum, arr) => sum + arr.length, 0);
   document.getElementById('total-count').textContent = total;
 }
@@ -634,16 +498,23 @@ function switchTab(id) {
   document.querySelectorAll('.panel').forEach(p => p.classList.toggle('panel--hidden', p.id !== 'panel-' + id));
 }
 
-// Live search filter (across whichever panel is currently visible — and others too)
+function showError(message) {
+  document.getElementById('panels').innerHTML = `
+    <div class="error">
+      <strong>Couldn't load proposals</strong>
+      <p>${message}<br>Make sure <code>proposals.json</code> is committed at the repo root.</p>
+    </div>`;
+}
+
+// Live search filter
 document.getElementById('search').addEventListener('input', e => {
   const q = e.target.value.trim().toLowerCase();
   document.querySelectorAll('.row').forEach(row => {
-    const haystack = row.dataset.search || '';
-    row.style.display = (!q || haystack.includes(q)) ? '' : 'none';
+    row.style.display = (!q || (row.dataset.search || '').includes(q)) ? '' : 'none';
   });
 });
 
-// Try to surface the logged-in Cloudflare Access user
+// Cloudflare Access identity (shows signed-in email in topbar if available)
 async function showUser() {
   try {
     const res = await fetch('/cdn-cgi/access/get-identity', { credentials: 'include' });
@@ -655,27 +526,17 @@ async function showUser() {
   } catch (e) { /* not on Cloudflare Access — silently ignore */ }
 }
 
-// Group records by category id
-function groupByCategory(records) {
-  const out = {};
-  CATEGORIES.forEach(c => out[c.id] = []);
-  records.forEach(r => {
-    const id = r.category ? r.category.id : 'uncategorised';
-    (out[id] = out[id] || []).push(r);
-  });
-  return out;
-}
-
 // ════════════════════════════════════════════════════════
 // BOOT
 // ════════════════════════════════════════════════════════
-
 (async function init() {
   showUser();
-
-  const { files, errors } = await fetchAllProposals();
-  const grouped = groupByCategory(files);
-  buildUi(grouped, errors);
+  try {
+    const records = await loadProposals();
+    buildUi(groupByCategory(records));
+  } catch (err) {
+    showError(err.message);
+  }
 })();
 </script>
 </body>
