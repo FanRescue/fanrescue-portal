@@ -1,0 +1,8 @@
+# Cloudflare Pages — _headers
+# Portal is behind Cloudflare Access, but layer defence-in-depth anyway.
+
+/*
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-store, max-age=0
+  X-Frame-Options: DENY
+  Referrer-Policy: same-origin

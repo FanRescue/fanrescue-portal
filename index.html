@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Fan Rescue — Internal Proposal Portal</title>
+
+<!-- Brand from central asset host -->
+<link rel="icon" type="image/svg+xml" href="https://assets.fanrescue.co.uk/favicon/favicon.svg">
+<link rel="icon" type="image/x-icon" href="https://assets.fanrescue.co.uk/favicon/favicon.ico">
+<link rel="apple-touch-icon" href="https://assets.fanrescue.co.uk/favicon/apple-touch-icon.png">
+<link rel="stylesheet" href="https://assets.fanrescue.co.uk/brand/tokens.css">
+
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-font-smoothing: antialiased; }
+body { font-family: var(--fr-font-body); background: var(--fr-warm-white); color: var(--fr-slate); line-height: 1.55; font-size: 15px; min-height: 100vh; }
+a { color: var(--fr-gold); text-decoration: none; }
+a:hover { color: var(--fr-gold-light); }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+/* ════ TOPBAR ════ */
+.topbar { background: var(--fr-navy-deep); border-bottom: 2px solid var(--fr-gold); padding: 14px 32px; display: flex; align-items: center; justify-content: space-between; }
+.topbar__brand { display: flex; align-items: center; gap: 16px; }
+.topbar__logo { height: 32px; display: block; }
+.topbar__label { font-size: 11px; color: var(--fr-gold-pale); letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; }
+.topbar__user { font-size: 12px; color: rgba(245, 242, 236, 0.55); }
+
+/* ════ MAIN ════ */
+main { max-width: 1100px; margin: 0 auto; padding: 40px 24px 80px; }
+.heading { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 32px; gap: 24px; flex-wrap: wrap; }
+.heading h1 { font-family: var(--fr-font-display); font-size: 30px; color: var(--fr-navy-deep); letter-spacing: 0.03em; }
+.heading p { color: var(--fr-warm-grey); font-size: 13px; margin-top: 4px; }
+.heading__total { font-size: 12px; color: var(--fr-warm-grey); letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; }
+.heading__total strong { color: var(--fr-navy-deep); font-family: var(--fr-font-display); font-size: 18px; letter-spacing: 0.02em; margin-left: 6px; }
+
+/* ════ SEARCH ════ */
+.search { position: relative; margin-bottom: 24px; }
+.search input { width: 100%; padding: 14px 16px 14px 44px; border: 1px solid var(--fr-border); border-radius: var(--fr-radius-md); font-family: var(--fr-font-body); font-size: 14px; background: #fff; color: var(--fr-slate); transition: border-color 0.15s; }
+.search input:focus { outline: none; border-color: var(--fr-gold); }
+.search input::placeholder { color: var(--fr-warm-grey); }
+.search svg { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); width: 18px; height: 18px; color: var(--fr-warm-grey); }
+
+/* ════ TABS ════ */
+.tabs { display: flex; gap: 4px; border-bottom: 2px solid var(--fr-border); margin-bottom: 0; }
+.tab { padding: 12px 20px; font-size: 13px; font-weight: 600; color: var(--fr-warm-grey); letter-spacing: 0.05em; text-transform: uppercase; border-bottom: 2px solid transparent; margin-bottom: -2px; transition: color 0.15s, border-color 0.15s; }
+.tab:hover { color: var(--fr-slate); }
+.tab--active { color: var(--fr-navy-deep); border-bottom-color: var(--fr-gold); }
+.tab__count { display: inline-block; background: var(--fr-warm-white); color: var(--fr-warm-grey); font-size: 11px; padding: 2px 8px; border-radius: 12px; margin-left: 8px; font-weight: 700; }
+.tab--active .tab__count { background: var(--fr-gold-pale); color: var(--fr-navy-deep); }
+
+/* ════ LIST ════ */
+.panel { background: #fff; border: 1px solid var(--fr-border); border-top: none; border-radius: 0 0 var(--fr-radius-md) var(--fr-radius-md); }
+.panel--hidden { display: none; }
+.row { display: grid; grid-template-columns: 90px 1fr 130px 100px; align-items: center; padding: 16px 24px; border-bottom: 1px solid var(--fr-border); transition: background 0.12s; cursor: pointer; gap: 16px; }
+.row:hover { background: var(--fr-warm-white); }
+.row:last-child { border-bottom: none; }
+.row__ref { font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 13px; color: var(--fr-gold); font-weight: 600; }
+.row__client { font-size: 15px; font-weight: 600; color: var(--fr-navy-deep); }
+.row__filename { font-size: 11px; color: var(--fr-warm-grey); font-family: ui-monospace, monospace; margin-top: 2px; word-break: break-all; }
+.row__type { font-size: 11px; color: var(--fr-warm-grey); letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; }
+.row__action { text-align: right; }
+.row__open { color: var(--fr-gold); font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0; transition: opacity 0.15s; }
+.row:hover .row__open { opacity: 1; }
+
+.empty { padding: 60px 24px; text-align: center; color: var(--fr-warm-grey); font-size: 14px; }
+.empty strong { display: block; font-family: var(--fr-font-display); font-size: 16px; color: var(--fr-navy-deep); margin-bottom: 6px; letter-spacing: 0.02em; }
+
+/* ════ LOADING ════ */
+.loading { padding: 80px 24px; text-align: center; }
+.loading__spinner { display: inline-block; width: 32px; height: 32px; border: 3px solid var(--fr-border); border-top-color: var(--fr-gold); border-radius: 50%; animation: spin 0.8s linear infinite; }
+.loading p { margin-top: 14px; font-size: 13px; color: var(--fr-warm-grey); }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ════ ERROR ════ */
+.error { background: #fff; border: 1px solid #f5c6c6; border-left: 4px solid #c64545; border-radius: var(--fr-radius-md); padding: 20px 24px; margin-top: 16px; }
+.error strong { display: block; color: #c64545; font-family: var(--fr-font-display); font-size: 14px; margin-bottom: 6px; letter-spacing: 0.02em; }
+.error p { font-size: 13px; color: var(--fr-slate); margin: 0; }
+.error code { background: var(--fr-warm-white); padding: 1px 6px; border-radius: 3px; font-size: 12px; color: var(--fr-navy-deep); }
+
+/* ════ FOOTER ════ */
+footer { max-width: 1100px; margin: 0 auto; padding: 24px; text-align: center; font-size: 11px; color: var(--fr-warm-grey); letter-spacing: 0.08em; text-transform: uppercase; }
+
+@media (max-width: 700px) {
+  .row { grid-template-columns: 70px 1fr auto; gap: 12px; padding: 14px 16px; }
+  .row__type { display: none; }
+  main { padding: 24px 12px 60px; }
+  .topbar { padding: 12px 16px; }
+  .heading h1 { font-size: 24px; }
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar__brand">
+    <img class="topbar__logo" src="https://assets.fanrescue.co.uk/logos/FR-Horizontal-Gold-Navy.svg" alt="Fan Rescue">
+    <span class="topbar__label">Internal Portal</span>
+  </div>
+  <div class="topbar__user" id="user-email">…</div>
+</div>
+
+<main>
+  <div class="heading">
+    <div>
+      <h1>Proposal Portal</h1>
+      <p>All live cleaning proposals and installation quotes across both hosting repos. Click any row to open in a new tab.</p>
+    </div>
+    <div class="heading__total">Total live <strong id="total-count">—</strong></div>
+  </div>
+
+  <div class="search">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+    <input id="search" type="search" placeholder="Search by client name, reference, or filename…" autocomplete="off">
+  </div>
+
+  <div class="tabs">
+    <button class="tab tab--active" data-tab="cleaning">Cleaning Proposals <span class="tab__count" id="count-cleaning">—</span></button>
+    <button class="tab" data-tab="installation">Installation Quotes <span class="tab__count" id="count-installation">—</span></button>
+  </div>
+
+  <div class="panel" id="panel-cleaning">
+    <div class="loading">
+      <div class="loading__spinner"></div>
+      <p>Loading proposals from GitHub…</p>
+    </div>
+  </div>
+
+  <div class="panel panel--hidden" id="panel-installation">
+    <div class="loading">
+      <div class="loading__spinner"></div>
+      <p>Loading quotes from GitHub…</p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  Fan Rescue Ltd · Internal use only · Updated live from GitHub
+</footer>
+
+<script>
+// ════════════════════════════════════════════════════════
+// PORTAL DATA LAYER
+// ════════════════════════════════════════════════════════
+
+const CONFIG = {
+  cleaning: {
+    owner: 'FanRescue',
+    repo:  'fan-rescue-proposals',
+    host:  'https://proposals.fanrescue.co.uk',
+    label: 'Cleaning'
+  },
+  installation: {
+    owner: 'FanRescue',
+    repo:  'fanrescue-quotes',
+    host:  'https://quotes.fanrescue.co.uk',
+    label: 'Installation'
+  }
+};
+
+// Match files like:  burgrill-clapton-FR-2035.html
+//                    joy-king-lau-restaurant-FR-2036.html
+//                    battersea-bloom-FR-2026-030.html (legacy 6-digit ref format)
+const FILENAME_PATTERN = /^([a-z0-9-]+?)-(FR-\d{4}(?:-\d{3})?)\.html$/i;
+
+// Title-case a kebab slug
+function humaniseSlug(slug) {
+  return slug
+    .split('-')
+    .map(w => w.length > 2 ? w[0].toUpperCase() + w.slice(1) : w.toUpperCase())
+    .join(' ');
+}
+
+// Parse a filename into a record, or null if it doesn't match the pattern
+function parseFilename(name) {
+  const m = name.match(FILENAME_PATTERN);
+  if (!m) return null;
+  return {
+    filename: name,
+    slug:     m[1],
+    ref:      m[2].toUpperCase(),
+    client:   humaniseSlug(m[1]),
+    lastModified: null   // populated below from /commits
+  };
+}
+
+// Fetch the file list for a single repo and enrich each with its
+// last-commit date so we can sort by "newest first".
+//
+// API cost per repo: 1 (contents) + N (one /commits per file).
+// With ~10 files per repo, ~22 calls per portal load across both.
+// GitHub allows 60 unauthenticated calls/hour/IP, so ~2-3 loads/hour/IP
+// is fine — well within realistic internal admin usage.
+//
+// If you grow past ~30 quotes per repo, switch to a cached index.json
+// built by a GitHub Action on push (see README "Known limits").
+async function fetchRepoFiles(cfg) {
+  const headers = { 'Accept': 'application/vnd.github+json' };
+
+  const contentsRes = await fetch(
+    `https://api.github.com/repos/${cfg.owner}/${cfg.repo}/contents/`,
+    { headers }
+  );
+
+  if (!contentsRes.ok) {
+    if (contentsRes.status === 403) throw new Error(`GitHub API rate limit reached. Try again in an hour.`);
+    if (contentsRes.status === 404) throw new Error(`Repository ${cfg.owner}/${cfg.repo} not found or private.`);
+    throw new Error(`GitHub returned ${contentsRes.status} for /contents/`);
+  }
+
+  const items = await contentsRes.json();
+  const records = items
+    .filter(item => item.type === 'file' && item.name.endsWith('.html'))
+    .map(item => parseFilename(item.name))
+    .filter(rec => rec !== null);
+
+  // Enrich each file with its most-recent commit date
+  await Promise.all(records.map(async (rec) => {
+    try {
+      const r = await fetch(
+        `https://api.github.com/repos/${cfg.owner}/${cfg.repo}/commits?path=${encodeURIComponent(rec.filename)}&per_page=1`,
+        { headers }
+      );
+      if (r.ok) {
+        const commits = await r.json();
+        if (commits.length && commits[0].commit && commits[0].commit.author) {
+          rec.lastModified = commits[0].commit.author.date;
+        }
+      }
+    } catch (e) { /* swallow; row will show "—" instead of a date */ }
+  }));
+
+  return records;
+}
+
+// Render the rows for one type
+function renderPanel(panelId, records, cfg) {
+  const panel = document.getElementById(panelId);
+  if (records.length === 0) {
+    panel.innerHTML = `<div class="empty"><strong>No proposals yet</strong>Once HTML files are added to the ${cfg.repo} repo, they'll appear here.</div>`;
+    return;
+  }
+  panel.innerHTML = records.map(r => {
+    const dateLabel = r.lastModified
+      ? formatRelativeDate(r.lastModified)
+      : '—';
+    return `
+    <a href="${cfg.host}/${r.filename.replace(/\.html$/, '')}" target="_blank" rel="noopener" class="row" data-search="${(r.client + ' ' + r.ref + ' ' + r.filename).toLowerCase()}">
+      <div class="row__ref">${r.ref}</div>
+      <div>
+        <div class="row__client">${r.client}</div>
+        <div class="row__filename">${r.filename}</div>
+      </div>
+      <div class="row__type">${dateLabel}</div>
+      <div class="row__action"><span class="row__open">Open ↗</span></div>
+    </a>
+  `;
+  }).join('');
+}
+
+// Format an ISO 8601 date as "3 days ago" / "2 weeks ago" / "15 May" / "May 2025"
+function formatRelativeDate(iso) {
+  const now = new Date();
+  const then = new Date(iso);
+  const diffMs = now - then;
+  const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+
+  if (diffDays === 0) return 'Today';
+  if (diffDays === 1) return 'Yesterday';
+  if (diffDays < 7)   return diffDays === 1 ? '1 day ago' : `${diffDays} days ago`;
+  if (diffDays < 30) {
+    const weeks = Math.floor(diffDays / 7);
+    return weeks === 1 ? '1 week ago' : `${weeks} weeks ago`;
+  }
+
+  // Older — show absolute date
+  const sameYear = then.getFullYear() === now.getFullYear();
+  const opts = sameYear
+    ? { day: 'numeric', month: 'short' }
+    : { month: 'short', year: 'numeric' };
+  return then.toLocaleDateString('en-GB', opts);
+}
+
+function showError(panelId, message, cfg) {
+  document.getElementById(panelId).innerHTML = `
+    <div class="error">
+      <strong>Couldn't load ${cfg.label.toLowerCase()} proposals</strong>
+      <p>${message}<br>Repo: <code>${cfg.owner}/${cfg.repo}</code></p>
+    </div>
+  `;
+}
+
+// Sort by commit date descending (truly newest first).
+// Files without a known date fall to the bottom, but sort among themselves by ref.
+function sortByDateDesc(records) {
+  return records.sort((a, b) => {
+    if (a.lastModified && b.lastModified) {
+      return new Date(b.lastModified) - new Date(a.lastModified);
+    }
+    if (a.lastModified) return -1;
+    if (b.lastModified) return 1;
+    // Both unknown — fall back to ref-string compare (reversed)
+    return b.ref.localeCompare(a.ref);
+  });
+}
+
+// ════════════════════════════════════════════════════════
+// UI
+// ════════════════════════════════════════════════════════
+
+// Tab switching
+document.querySelectorAll('.tab').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('tab--active'));
+    document.querySelectorAll('.panel').forEach(p => p.classList.add('panel--hidden'));
+    btn.classList.add('tab--active');
+    document.getElementById('panel-' + btn.dataset.tab).classList.remove('panel--hidden');
+  });
+});
+
+// Live search filter (across both panels)
+document.getElementById('search').addEventListener('input', e => {
+  const q = e.target.value.trim().toLowerCase();
+  document.querySelectorAll('.row').forEach(row => {
+    const haystack = row.dataset.search || '';
+    row.style.display = (!q || haystack.includes(q)) ? '' : 'none';
+  });
+});
+
+// Try to surface the logged-in Cloudflare Access user (graceful fallback)
+async function showUser() {
+  try {
+    const res = await fetch('/cdn-cgi/access/get-identity', { credentials: 'include' });
+    if (res.ok) {
+      const data = await res.json();
+      const email = data.email || data.user_uuid || '';
+      document.getElementById('user-email').textContent = email ? `Signed in as ${email}` : '';
+    }
+  } catch (e) { /* not on Cloudflare Access or local dev — silently ignore */ }
+}
+
+// ════════════════════════════════════════════════════════
+// BOOT
+// ════════════════════════════════════════════════════════
+
+(async function init() {
+  showUser();
+
+  // Kick off both fetches in parallel
+  const cleaningPromise     = fetchRepoFiles(CONFIG.cleaning).catch(err => ({ error: err.message }));
+  const installationPromise = fetchRepoFiles(CONFIG.installation).catch(err => ({ error: err.message }));
+
+  const [cleaning, installation] = await Promise.all([cleaningPromise, installationPromise]);
+
+  // Cleaning panel
+  if (cleaning.error) {
+    showError('panel-cleaning', cleaning.error, CONFIG.cleaning);
+    document.getElementById('count-cleaning').textContent = '!';
+  } else {
+    const sorted = sortByDateDesc(cleaning);
+    renderPanel('panel-cleaning', sorted, CONFIG.cleaning);
+    document.getElementById('count-cleaning').textContent = sorted.length;
+  }
+
+  // Installation panel
+  if (installation.error) {
+    showError('panel-installation', installation.error, CONFIG.installation);
+    document.getElementById('count-installation').textContent = '!';
+  } else {
+    const sorted = sortByDateDesc(installation);
+    renderPanel('panel-installation', sorted, CONFIG.installation);
+    document.getElementById('count-installation').textContent = sorted.length;
+  }
+
+  // Total
+  const total = (cleaning.length || 0) + (installation.length || 0);
+  document.getElementById('total-count').textContent = total || '—';
+})();
+</script>
+</body>
+</html>
