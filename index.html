@@ -15,72 +15,270 @@
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { -webkit-font-smoothing: antialiased; }
-body { font-family: var(--fr-font-body); background: var(--fr-warm-white); color: var(--fr-slate); line-height: 1.55; font-size: 15px; min-height: 100vh; }
+body {
+  font-family: var(--fr-font-body);
+  background: var(--fr-navy-deep);
+  color: var(--fr-warm-white);
+  line-height: 1.55;
+  font-size: 15px;
+  min-height: 100vh;
+}
 a { color: var(--fr-gold); text-decoration: none; }
 a:hover { color: var(--fr-gold-light); }
 button { font-family: inherit; cursor: pointer; border: none; background: none; }
 
 /* ════ TOPBAR ════ */
-.topbar { background: var(--fr-navy-deep); border-bottom: 2px solid var(--fr-gold); padding: 14px 32px; display: flex; align-items: center; justify-content: space-between; }
+.topbar {
+  background: var(--fr-navy-mid);
+  border-bottom: 2px solid var(--fr-gold);
+  padding: 14px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .topbar__brand { display: flex; align-items: center; gap: 16px; }
 .topbar__logo { height: 32px; display: block; }
-.topbar__label { font-size: 11px; color: var(--fr-gold-pale); letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; }
+.topbar__label {
+  font-size: 11px;
+  color: var(--fr-gold-pale);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
 .topbar__user { font-size: 12px; color: rgba(245, 242, 236, 0.55); }
 
 /* ════ MAIN ════ */
 main { max-width: 1100px; margin: 0 auto; padding: 40px 24px 80px; }
-.heading { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 32px; gap: 24px; flex-wrap: wrap; }
-.heading h1 { font-family: var(--fr-font-display); font-size: 30px; color: var(--fr-navy-deep); letter-spacing: 0.03em; }
-.heading p { color: var(--fr-warm-grey); font-size: 13px; margin-top: 4px; }
-.heading__total { font-size: 12px; color: var(--fr-warm-grey); letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; }
-.heading__total strong { color: var(--fr-navy-deep); font-family: var(--fr-font-display); font-size: 18px; letter-spacing: 0.02em; margin-left: 6px; }
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 32px;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.heading h1 {
+  font-family: var(--fr-font-display);
+  font-size: 30px;
+  color: var(--fr-gold);
+  letter-spacing: 0.03em;
+}
+.heading p {
+  color: rgba(245, 242, 236, 0.6);
+  font-size: 13px;
+  margin-top: 6px;
+}
+.heading__total {
+  font-size: 12px;
+  color: rgba(245, 242, 236, 0.5);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.heading__total strong {
+  color: var(--fr-gold);
+  font-family: var(--fr-font-display);
+  font-size: 18px;
+  letter-spacing: 0.02em;
+  margin-left: 6px;
+}
 
 /* ════ SEARCH ════ */
 .search { position: relative; margin-bottom: 24px; }
-.search input { width: 100%; padding: 14px 16px 14px 44px; border: 1px solid var(--fr-border); border-radius: var(--fr-radius-md); font-family: var(--fr-font-body); font-size: 14px; background: #fff; color: var(--fr-slate); transition: border-color 0.15s; }
-.search input:focus { outline: none; border-color: var(--fr-gold); }
-.search input::placeholder { color: var(--fr-warm-grey); }
-.search svg { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); width: 18px; height: 18px; color: var(--fr-warm-grey); }
+.search input {
+  width: 100%;
+  padding: 14px 16px 14px 44px;
+  border: 1px solid rgba(245, 242, 236, 0.15);
+  border-radius: var(--fr-radius-md);
+  font-family: var(--fr-font-body);
+  font-size: 14px;
+  background: rgba(245, 242, 236, 0.05);
+  color: var(--fr-warm-white);
+  transition: border-color 0.15s, background 0.15s;
+}
+.search input:focus {
+  outline: none;
+  border-color: var(--fr-gold);
+  background: rgba(245, 242, 236, 0.08);
+}
+.search input::placeholder { color: rgba(245, 242, 236, 0.4); }
+.search svg {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  color: rgba(245, 242, 236, 0.4);
+}
 
 /* ════ TABS ════ */
-.tabs { display: flex; gap: 4px; border-bottom: 2px solid var(--fr-border); margin-bottom: 0; }
-.tab { padding: 12px 20px; font-size: 13px; font-weight: 600; color: var(--fr-warm-grey); letter-spacing: 0.05em; text-transform: uppercase; border-bottom: 2px solid transparent; margin-bottom: -2px; transition: color 0.15s, border-color 0.15s; }
-.tab:hover { color: var(--fr-slate); }
-.tab--active { color: var(--fr-navy-deep); border-bottom-color: var(--fr-gold); }
-.tab__count { display: inline-block; background: var(--fr-warm-white); color: var(--fr-warm-grey); font-size: 11px; padding: 2px 8px; border-radius: 12px; margin-left: 8px; font-weight: 700; }
-.tab--active .tab__count { background: var(--fr-gold-pale); color: var(--fr-navy-deep); }
+.tabs {
+  display: flex;
+  gap: 4px;
+  border-bottom: 2px solid rgba(245, 242, 236, 0.1);
+  margin-bottom: 0;
+}
+.tab {
+  padding: 12px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(245, 242, 236, 0.5);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: color 0.15s, border-color 0.15s;
+}
+.tab:hover { color: var(--fr-warm-white); }
+.tab--active {
+  color: var(--fr-gold);
+  border-bottom-color: var(--fr-gold);
+}
+.tab__count {
+  display: inline-block;
+  background: rgba(245, 242, 236, 0.08);
+  color: rgba(245, 242, 236, 0.6);
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 12px;
+  margin-left: 8px;
+  font-weight: 700;
+}
+.tab--active .tab__count {
+  background: var(--fr-gold);
+  color: var(--fr-navy-deep);
+}
 
 /* ════ LIST ════ */
-.panel { background: #fff; border: 1px solid var(--fr-border); border-top: none; border-radius: 0 0 var(--fr-radius-md) var(--fr-radius-md); }
+/* Rows stay light for readability. They sit as "cards" on the navy page. */
+.panel {
+  background: var(--fr-warm-white);
+  border: 1px solid rgba(245, 242, 236, 0.1);
+  border-top: none;
+  border-radius: 0 0 var(--fr-radius-md) var(--fr-radius-md);
+  overflow: hidden;
+}
 .panel--hidden { display: none; }
-.row { display: grid; grid-template-columns: 90px 1fr 130px 100px; align-items: center; padding: 16px 24px; border-bottom: 1px solid var(--fr-border); transition: background 0.12s; cursor: pointer; gap: 16px; }
-.row:hover { background: var(--fr-warm-white); }
+.row {
+  display: grid;
+  grid-template-columns: 90px 1fr 130px 100px;
+  align-items: center;
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--fr-border);
+  transition: background 0.12s;
+  cursor: pointer;
+  gap: 16px;
+}
+.row:hover { background: #faf7ef; }
 .row:last-child { border-bottom: none; }
-.row__ref { font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 13px; color: var(--fr-gold); font-weight: 600; }
-.row__client { font-size: 15px; font-weight: 600; color: var(--fr-navy-deep); }
-.row__filename { font-size: 11px; color: var(--fr-warm-grey); font-family: ui-monospace, monospace; margin-top: 2px; word-break: break-all; }
-.row__type { font-size: 11px; color: var(--fr-warm-grey); letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; }
+.row__ref {
+  font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+  font-size: 13px;
+  color: var(--fr-gold);
+  font-weight: 600;
+}
+.row__client {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--fr-navy-deep);
+}
+.row__filename {
+  font-size: 11px;
+  color: var(--fr-warm-grey);
+  font-family: ui-monospace, monospace;
+  margin-top: 2px;
+  word-break: break-all;
+}
+.row__type {
+  font-size: 11px;
+  color: var(--fr-warm-grey);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
 .row__action { text-align: right; }
-.row__open { color: var(--fr-gold); font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0; transition: opacity 0.15s; }
+.row__open {
+  color: var(--fr-gold);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
 .row:hover .row__open { opacity: 1; }
 
-.empty { padding: 60px 24px; text-align: center; color: var(--fr-warm-grey); font-size: 14px; }
-.empty strong { display: block; font-family: var(--fr-font-display); font-size: 16px; color: var(--fr-navy-deep); margin-bottom: 6px; letter-spacing: 0.02em; }
+.empty {
+  padding: 60px 24px;
+  text-align: center;
+  color: var(--fr-warm-grey);
+  font-size: 14px;
+}
+.empty strong {
+  display: block;
+  font-family: var(--fr-font-display);
+  font-size: 16px;
+  color: var(--fr-navy-deep);
+  margin-bottom: 6px;
+  letter-spacing: 0.02em;
+}
 
 /* ════ LOADING ════ */
 .loading { padding: 80px 24px; text-align: center; }
-.loading__spinner { display: inline-block; width: 32px; height: 32px; border: 3px solid var(--fr-border); border-top-color: var(--fr-gold); border-radius: 50%; animation: spin 0.8s linear infinite; }
+.loading__spinner {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border: 3px solid var(--fr-border);
+  border-top-color: var(--fr-gold);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
 .loading p { margin-top: 14px; font-size: 13px; color: var(--fr-warm-grey); }
 @keyframes spin { to { transform: rotate(360deg); } }
 
 /* ════ ERROR ════ */
-.error { background: #fff; border: 1px solid #f5c6c6; border-left: 4px solid #c64545; border-radius: var(--fr-radius-md); padding: 20px 24px; margin-top: 16px; }
-.error strong { display: block; color: #c64545; font-family: var(--fr-font-display); font-size: 14px; margin-bottom: 6px; letter-spacing: 0.02em; }
-.error p { font-size: 13px; color: var(--fr-slate); margin: 0; }
-.error code { background: var(--fr-warm-white); padding: 1px 6px; border-radius: 3px; font-size: 12px; color: var(--fr-navy-deep); }
+.error {
+  background: rgba(198, 69, 69, 0.1);
+  border: 1px solid rgba(198, 69, 69, 0.3);
+  border-left: 4px solid #d97373;
+  border-radius: var(--fr-radius-md);
+  padding: 20px 24px;
+  margin-top: 16px;
+}
+.error strong {
+  display: block;
+  color: #f0a8a8;
+  font-family: var(--fr-font-display);
+  font-size: 14px;
+  margin-bottom: 6px;
+  letter-spacing: 0.02em;
+}
+.error p {
+  font-size: 13px;
+  color: rgba(245, 242, 236, 0.7);
+  margin: 0;
+}
+.error code {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1px 6px;
+  border-radius: 3px;
+  font-size: 12px;
+  color: var(--fr-gold-pale);
+}
 
 /* ════ FOOTER ════ */
-footer { max-width: 1100px; margin: 0 auto; padding: 24px; text-align: center; font-size: 11px; color: var(--fr-warm-grey); letter-spacing: 0.08em; text-transform: uppercase; }
+footer {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+  text-align: center;
+  font-size: 11px;
+  color: rgba(245, 242, 236, 0.3);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
 
 @media (max-width: 700px) {
   .row { grid-template-columns: 70px 1fr auto; gap: 12px; padding: 14px 16px; }
@@ -105,7 +303,7 @@ footer { max-width: 1100px; margin: 0 auto; padding: 24px; text-align: center; f
   <div class="heading">
     <div>
       <h1>Proposal Portal</h1>
-      <p>All live cleaning proposals and installation quotes across both hosting repos. Click any row to open in a new tab.</p>
+      <p>All live proposals across cleaning, installations, and fan replacements. Pulled live from GitHub. Click any row to open in a new tab.</p>
     </div>
     <div class="heading__total">Total live <strong id="total-count">—</strong></div>
   </div>
@@ -115,22 +313,16 @@ footer { max-width: 1100px; margin: 0 auto; padding: 24px; text-align: center; f
     <input id="search" type="search" placeholder="Search by client name, reference, or filename…" autocomplete="off">
   </div>
 
-  <div class="tabs">
-    <button class="tab tab--active" data-tab="cleaning">Cleaning Proposals <span class="tab__count" id="count-cleaning">—</span></button>
-    <button class="tab" data-tab="installation">Installation Quotes <span class="tab__count" id="count-installation">—</span></button>
+  <div class="tabs" id="tabs">
+    <!-- Tabs are inserted dynamically based on which categories have proposals -->
   </div>
 
-  <div class="panel" id="panel-cleaning">
-    <div class="loading">
-      <div class="loading__spinner"></div>
-      <p>Loading proposals from GitHub…</p>
-    </div>
-  </div>
-
-  <div class="panel panel--hidden" id="panel-installation">
-    <div class="loading">
-      <div class="loading__spinner"></div>
-      <p>Loading quotes from GitHub…</p>
+  <div id="panels">
+    <div class="panel">
+      <div class="loading">
+        <div class="loading__spinner"></div>
+        <p>Loading proposals from GitHub…</p>
+      </div>
     </div>
   </div>
 </main>
@@ -144,20 +336,70 @@ footer { max-width: 1100px; margin: 0 auto; padding: 24px; text-align: center; f
 // PORTAL DATA LAYER
 // ════════════════════════════════════════════════════════
 
-const CONFIG = {
-  cleaning: {
+// ════════════════════════════════════════════════════════
+// REPO SOURCES — both repos are scanned, files are then
+// classified by their hero badge content, not by repo.
+// ════════════════════════════════════════════════════════
+const REPOS = [
+  {
     owner: 'FanRescue',
-    repo:  'fan-rescue-proposals',
-    host:  'https://proposals.fanrescue.co.uk',
-    label: 'Cleaning'
+    repo:  'fanrescue-proposals',
+    host:  'https://proposals.fanrescue.co.uk'
   },
-  installation: {
+  {
     owner: 'FanRescue',
     repo:  'fanrescue-quotes',
-    host:  'https://quotes.fanrescue.co.uk',
-    label: 'Installation'
+    host:  'https://quotes.fanrescue.co.uk'
   }
-};
+];
+
+// ════════════════════════════════════════════════════════
+// CATEGORIES — classification rules in priority order.
+// First rule whose `match` function returns true wins.
+// ════════════════════════════════════════════════════════
+const CATEGORIES = [
+  {
+    id:    'fan-replacement',
+    label: 'Fan Replacement / Repair',
+    short: 'Fan Replacement',
+    match: badge => /fan\s*(replacement|repair)/i.test(badge)
+  },
+  {
+    id:    'installation',
+    label: 'Installations',
+    short: 'Installation',
+    match: badge => {
+      const b = badge.toUpperCase();
+      if (b.includes('INSTALLATION'))   return true;
+      if (b.includes('INDICATIVE'))     return true;
+      if (b.includes('VENTILATION') && b.includes('AIR CONDITIONING')) return true;
+      if (b.includes('M&E') || b.includes('M & E')) return true;
+      return false;
+    }
+  },
+  {
+    id:    'cleaning',
+    label: 'Cleaning Proposals',
+    short: 'Cleaning',
+    match: badge => {
+      const b = badge.toUpperCase();
+      return b.includes('CLEANING') || b.includes('TR19') || b.includes('SERVICE AGREEMENT');
+    }
+  },
+  {
+    id:    'uncategorised',
+    label: 'Uncategorised',
+    short: 'Other',
+    match: () => true     // catch-all — must be last
+  }
+];
+
+function classify(badgeText) {
+  for (const cat of CATEGORIES) {
+    if (cat.match(badgeText || '')) return cat;
+  }
+  return CATEGORIES[CATEGORIES.length - 1];
+}
 
 // Match files like:  burgrill-clapton-FR-2035.html
 //                    joy-king-lau-restaurant-FR-2036.html
@@ -185,16 +427,10 @@ function parseFilename(name) {
   };
 }
 
-// Fetch the file list for a single repo and enrich each with its
-// last-commit date so we can sort by "newest first".
-//
-// API cost per repo: 1 (contents) + N (one /commits per file).
-// With ~10 files per repo, ~22 calls per portal load across both.
-// GitHub allows 60 unauthenticated calls/hour/IP, so ~2-3 loads/hour/IP
-// is fine — well within realistic internal admin usage.
-//
-// If you grow past ~30 quotes per repo, switch to a cached index.json
-// built by a GitHub Action on push (see README "Known limits").
+// Fetch the file list for a single repo and enrich each with:
+//   - lastModified  (from GitHub commits API)
+//   - badge         (from fetching the file's hero badge)
+//   - category      (derived from badge)
 async function fetchRepoFiles(cfg) {
   const headers = { 'Accept': 'application/vnd.github+json' };
 
@@ -212,11 +448,20 @@ async function fetchRepoFiles(cfg) {
   const items = await contentsRes.json();
   const records = items
     .filter(item => item.type === 'file' && item.name.endsWith('.html'))
-    .map(item => parseFilename(item.name))
+    .map(item => {
+      const rec = parseFilename(item.name);
+      if (rec) {
+        rec.host = cfg.host;
+        rec.repo = cfg.repo;
+        rec.url  = `${cfg.host}/${rec.filename.replace(/\.html$/, '')}`;
+      }
+      return rec;
+    })
     .filter(rec => rec !== null);
 
-  // Enrich each file with its most-recent commit date
+  // Enrich each with commit date + hero badge in parallel
   await Promise.all(records.map(async (rec) => {
+    // 1. Commit date — GitHub API
     try {
       const r = await fetch(
         `https://api.github.com/repos/${cfg.owner}/${cfg.repo}/commits?path=${encodeURIComponent(rec.filename)}&per_page=1`,
@@ -228,25 +473,52 @@ async function fetchRepoFiles(cfg) {
           rec.lastModified = commits[0].commit.author.date;
         }
       }
-    } catch (e) { /* swallow; row will show "—" instead of a date */ }
+    } catch (e) { /* row will show "—" */ }
+
+    // 2. Hero badge — fetch from the live URL (no GitHub API call)
+    try {
+      const r = await fetch(rec.url + '.html', { cache: 'default' });
+      if (r.ok) {
+        // Read just enough to find the badge — first 8KB is plenty
+        const text = (await r.text()).slice(0, 8192);
+        const m = text.match(/<div\s+class="[^"]*fr-hero__badge[^"]*"[^>]*>([^<]+)<\/div>/i);
+        rec.badge = m ? m[1].trim() : '';
+      }
+    } catch (e) { rec.badge = ''; }
+
+    // 3. Classify
+    rec.category = classify(rec.badge);
   }));
 
   return records;
 }
 
-// Render the rows for one type
-function renderPanel(panelId, records, cfg) {
-  const panel = document.getElementById(panelId);
+// Fetch all repos in parallel and merge
+async function fetchAllProposals() {
+  const results = await Promise.all(
+    REPOS.map(cfg => fetchRepoFiles(cfg).catch(err => ({ error: err.message, repo: cfg.repo })))
+  );
+
+  const allFiles = [];
+  const errors = [];
+  for (const r of results) {
+    if (r.error) errors.push(r);
+    else allFiles.push(...r);
+  }
+  return { files: allFiles, errors };
+}
+
+// Render the rows for one category into its panel
+function renderPanel(panelEl, records) {
   if (records.length === 0) {
-    panel.innerHTML = `<div class="empty"><strong>No proposals yet</strong>Once HTML files are added to the ${cfg.repo} repo, they'll appear here.</div>`;
+    panelEl.innerHTML = `<div class="empty"><strong>Nothing here yet</strong>Once HTML files matching this category are pushed, they'll appear here.</div>`;
     return;
   }
-  panel.innerHTML = records.map(r => {
-    const dateLabel = r.lastModified
-      ? formatRelativeDate(r.lastModified)
-      : '—';
+  panelEl.innerHTML = records.map(r => {
+    const dateLabel = r.lastModified ? formatRelativeDate(r.lastModified) : '—';
+    const searchKey = (r.client + ' ' + r.ref + ' ' + r.filename + ' ' + (r.badge || '')).toLowerCase();
     return `
-    <a href="${cfg.host}/${r.filename.replace(/\.html$/, '')}" target="_blank" rel="noopener" class="row" data-search="${(r.client + ' ' + r.ref + ' ' + r.filename).toLowerCase()}">
+    <a href="${r.url}" target="_blank" rel="noopener" class="row" data-search="${searchKey}">
       <div class="row__ref">${r.ref}</div>
       <div>
         <div class="row__client">${r.client}</div>
@@ -274,7 +546,6 @@ function formatRelativeDate(iso) {
     return weeks === 1 ? '1 week ago' : `${weeks} weeks ago`;
   }
 
-  // Older — show absolute date
   const sameYear = then.getFullYear() === now.getFullYear();
   const opts = sameYear
     ? { day: 'numeric', month: 'short' }
@@ -282,17 +553,8 @@ function formatRelativeDate(iso) {
   return then.toLocaleDateString('en-GB', opts);
 }
 
-function showError(panelId, message, cfg) {
-  document.getElementById(panelId).innerHTML = `
-    <div class="error">
-      <strong>Couldn't load ${cfg.label.toLowerCase()} proposals</strong>
-      <p>${message}<br>Repo: <code>${cfg.owner}/${cfg.repo}</code></p>
-    </div>
-  `;
-}
-
 // Sort by commit date descending (truly newest first).
-// Files without a known date fall to the bottom, but sort among themselves by ref.
+// Files without a known date fall to the bottom, sorted by ref string.
 function sortByDateDesc(records) {
   return records.sort((a, b) => {
     if (a.lastModified && b.lastModified) {
@@ -300,7 +562,6 @@ function sortByDateDesc(records) {
     }
     if (a.lastModified) return -1;
     if (b.lastModified) return 1;
-    // Both unknown — fall back to ref-string compare (reversed)
     return b.ref.localeCompare(a.ref);
   });
 }
@@ -309,17 +570,71 @@ function sortByDateDesc(records) {
 // UI
 // ════════════════════════════════════════════════════════
 
-// Tab switching
-document.querySelectorAll('.tab').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.tab').forEach(t => t.classList.remove('tab--active'));
-    document.querySelectorAll('.panel').forEach(p => p.classList.add('panel--hidden'));
-    btn.classList.add('tab--active');
-    document.getElementById('panel-' + btn.dataset.tab).classList.remove('panel--hidden');
-  });
-});
+// Tab display order — different from match priority.
+// Match priority puts most-specific rules first (Fan Replacement),
+// but the UI shows the most-common category first (Cleaning).
+const TAB_ORDER = ['cleaning', 'installation', 'fan-replacement', 'uncategorised'];
 
-// Live search filter (across both panels)
+// Build the tabs + panels DOM from the categories present in the data
+function buildUi(grouped, errors) {
+  const tabsContainer   = document.getElementById('tabs');
+  const panelsContainer = document.getElementById('panels');
+
+  tabsContainer.innerHTML = '';
+  panelsContainer.innerHTML = '';
+
+  // Render error banner if any repo failed
+  if (errors.length) {
+    const banner = document.createElement('div');
+    banner.className = 'error';
+    banner.innerHTML = errors.map(e =>
+      `<strong>Couldn't load ${e.repo}</strong><p>${e.message}<br>Repo: <code>FanRescue/${e.repo}</code></p>`
+    ).join('');
+    panelsContainer.appendChild(banner);
+  }
+
+  // Only render tabs for categories that actually have files, in TAB_ORDER
+  const visibleCategories = TAB_ORDER
+    .map(id => CATEGORIES.find(c => c.id === id))
+    .filter(cat => cat && (grouped[cat.id] || []).length > 0);
+
+  if (visibleCategories.length === 0) {
+    panelsContainer.insertAdjacentHTML('beforeend',
+      `<div class="panel"><div class="empty"><strong>No proposals yet</strong>Push HTML files to either repo and they'll appear here.</div></div>`
+    );
+    return;
+  }
+
+  visibleCategories.forEach((cat, i) => {
+    const records = sortByDateDesc(grouped[cat.id]);
+
+    // Tab
+    const tab = document.createElement('button');
+    tab.className = 'tab' + (i === 0 ? ' tab--active' : '');
+    tab.dataset.tab = cat.id;
+    tab.innerHTML = `${cat.label} <span class="tab__count">${records.length}</span>`;
+    tab.addEventListener('click', () => switchTab(cat.id));
+    tabsContainer.appendChild(tab);
+
+    // Panel
+    const panel = document.createElement('div');
+    panel.className = 'panel' + (i === 0 ? '' : ' panel--hidden');
+    panel.id = 'panel-' + cat.id;
+    panelsContainer.appendChild(panel);
+    renderPanel(panel, records);
+  });
+
+  // Update header total
+  const total = Object.values(grouped).reduce((sum, arr) => sum + arr.length, 0);
+  document.getElementById('total-count').textContent = total;
+}
+
+function switchTab(id) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.toggle('tab--active', t.dataset.tab === id));
+  document.querySelectorAll('.panel').forEach(p => p.classList.toggle('panel--hidden', p.id !== 'panel-' + id));
+}
+
+// Live search filter (across whichever panel is currently visible — and others too)
 document.getElementById('search').addEventListener('input', e => {
   const q = e.target.value.trim().toLowerCase();
   document.querySelectorAll('.row').forEach(row => {
@@ -328,7 +643,7 @@ document.getElementById('search').addEventListener('input', e => {
   });
 });
 
-// Try to surface the logged-in Cloudflare Access user (graceful fallback)
+// Try to surface the logged-in Cloudflare Access user
 async function showUser() {
   try {
     const res = await fetch('/cdn-cgi/access/get-identity', { credentials: 'include' });
@@ -337,7 +652,18 @@ async function showUser() {
       const email = data.email || data.user_uuid || '';
       document.getElementById('user-email').textContent = email ? `Signed in as ${email}` : '';
     }
-  } catch (e) { /* not on Cloudflare Access or local dev — silently ignore */ }
+  } catch (e) { /* not on Cloudflare Access — silently ignore */ }
+}
+
+// Group records by category id
+function groupByCategory(records) {
+  const out = {};
+  CATEGORIES.forEach(c => out[c.id] = []);
+  records.forEach(r => {
+    const id = r.category ? r.category.id : 'uncategorised';
+    (out[id] = out[id] || []).push(r);
+  });
+  return out;
 }
 
 // ════════════════════════════════════════════════════════
@@ -347,35 +673,9 @@ async function showUser() {
 (async function init() {
   showUser();
 
-  // Kick off both fetches in parallel
-  const cleaningPromise     = fetchRepoFiles(CONFIG.cleaning).catch(err => ({ error: err.message }));
-  const installationPromise = fetchRepoFiles(CONFIG.installation).catch(err => ({ error: err.message }));
-
-  const [cleaning, installation] = await Promise.all([cleaningPromise, installationPromise]);
-
-  // Cleaning panel
-  if (cleaning.error) {
-    showError('panel-cleaning', cleaning.error, CONFIG.cleaning);
-    document.getElementById('count-cleaning').textContent = '!';
-  } else {
-    const sorted = sortByDateDesc(cleaning);
-    renderPanel('panel-cleaning', sorted, CONFIG.cleaning);
-    document.getElementById('count-cleaning').textContent = sorted.length;
-  }
-
-  // Installation panel
-  if (installation.error) {
-    showError('panel-installation', installation.error, CONFIG.installation);
-    document.getElementById('count-installation').textContent = '!';
-  } else {
-    const sorted = sortByDateDesc(installation);
-    renderPanel('panel-installation', sorted, CONFIG.installation);
-    document.getElementById('count-installation').textContent = sorted.length;
-  }
-
-  // Total
-  const total = (cleaning.length || 0) + (installation.length || 0);
-  document.getElementById('total-count').textContent = total || '—';
+  const { files, errors } = await fetchAllProposals();
+  const grouped = groupByCategory(files);
+  buildUi(grouped, errors);
 })();
 </script>
 </body>
