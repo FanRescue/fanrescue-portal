@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-040",
+      "client": "Afrikana Uxbridge",
+      "filename": "afrikana-uxbridge-FR-2026-040",
+      "host": "proposals",
+      "category": "cleaning"
+    },
+    {
       "ref": "FR-2026-001",
       "client": "Kotak Design",
       "filename": "kotak-design-FR-2026-001",
