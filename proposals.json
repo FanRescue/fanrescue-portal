@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-032",
+      "client": "Ong Lai Kopitiam",
+      "filename": "ong-lai-kopitiam-FR-2026-032",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
       "ref": "FR-2026-033",
       "client": "Hectors Fine Wine",
       "filename": "hectors-fine-wine-FR-2026-033",
