@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-041",
+      "client": "Hub",
+      "filename": "hub-FR-2026-041",
+      "host": "proposals",
+      "category": "cleaning"
+    },
+    {
       "ref": "FR-2026-040",
       "client": "Tasmin Shatu",
       "filename": "tasmin-shatu-FR-2026-040",
