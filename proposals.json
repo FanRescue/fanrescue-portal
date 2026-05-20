@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-042",
+      "client": "Annies Chiswick",
+      "filename": "annies-chiswick-FR-2026-042",
+      "host": "proposals",
+      "category": "cleaning"
+    },
+    {
       "ref": "FR-2026-041",
       "client": "Hub",
       "filename": "hub-FR-2026-041",
