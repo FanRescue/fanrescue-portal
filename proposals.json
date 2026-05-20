@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-040",
+      "client": "Tasmin Shatu",
+      "filename": "tasmin-shatu-FR-2026-040",
+      "host": "proposals",
+      "category": "cleaning"
+    },
+    {
       "ref": "FR-2026-032",
       "client": "Ong Lai Kopitiam",
       "filename": "ong-lai-kopitiam-FR-2026-032",
