@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-044",
+      "client": "Players Social",
+      "filename": "players-social-FR-2026-044",
+      "host": "proposals",
+      "category": "cleaning"
+    },
+    {
       "ref": "FR-2026-043",
       "client": "The Albert Inn",
       "filename": "the-albert-inn-FR-2026-043",
