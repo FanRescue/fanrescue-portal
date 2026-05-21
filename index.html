@@ -471,9 +471,13 @@ function buildUi(grouped) {
   tabsContainer.innerHTML   = '';
   panelsContainer.innerHTML = '';
 
+  // Tabs always visible even when empty (signals workflow to the team).
+  // Add any future "pinned" category ids here.
+  const ALWAYS_VISIBLE = new Set(['renewals']);
+
   const visible = TAB_ORDER
     .map(id => CATEGORIES.find(c => c.id === id))
-    .filter(cat => cat && (grouped[cat.id] || []).length > 0);
+    .filter(cat => cat && (ALWAYS_VISIBLE.has(cat.id) || (grouped[cat.id] || []).length > 0));
 
   if (visible.length === 0) {
     panelsContainer.insertAdjacentHTML('beforeend',
