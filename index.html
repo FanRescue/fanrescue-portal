@@ -118,6 +118,7 @@ main { max-width: 1100px; margin: 0 auto; padding: 40px 24px 80px; }
   gap: 4px;
   border-bottom: 2px solid rgba(245, 242, 236, 0.1);
   margin-bottom: 0;
+  flex-wrap: wrap;
 }
 .tab {
   padding: 12px 20px;
@@ -344,12 +345,19 @@ footer {
 //      quotes.fanrescue.co.uk as normal.
 //   2. Add a new entry to proposals.json (one line). Push.
 //   3. Refresh the portal — done.
+//
+// Adding a renewal:
+//   1. Generate the renewal HTML in the proposals.fanrescue.co.uk repo
+//      (same hosting as a standard proposal).
+//   2. Add an entry to proposals.json with "category": "renewals".
+//   3. It will appear in the Renewals tab only (not Cleaning).
 // ════════════════════════════════════════════════════════
 
 // ─── Categories ─────────────────────────────────────────
 // The id values must match the "category" values in proposals.json.
 const CATEGORIES = [
   { id: 'cleaning',        label: 'Cleaning' },
+  { id: 'renewals',        label: 'Renewals' },
   { id: 'installation',    label: 'Installations' },
   { id: 'fan-services',    label: 'Fan Services' },
   { id: 'me-design',       label: 'M&E Design' },
@@ -395,7 +403,7 @@ function refSortKey(ref) {
 // UI
 // ════════════════════════════════════════════════════════
 
-const TAB_ORDER = ['cleaning', 'installation', 'fan-services', 'me-design', 'odour-risk', 'mixed', 'uncategorised'];
+const TAB_ORDER = ['cleaning', 'renewals', 'installation', 'fan-services', 'me-design', 'odour-risk', 'mixed', 'uncategorised'];
 
 function groupByCategory(records) {
   const out = {};
