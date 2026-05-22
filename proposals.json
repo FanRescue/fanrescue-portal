@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-033",
+      "client": "Li Group",
+      "filename": "li-group-FR-2026-033",
+      "host": "proposals",
+      "category": "installation"
+    },
+    {
       "ref": "FR-2026-044",
       "client": "Players Social",
       "filename": "players-social-FR-2026-044",
