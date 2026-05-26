@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-038",
+      "client": "Colbeh",
+      "filename": "colbeh-FR-2026-038",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
       "ref": "FR-2026-040",
       "client": "Sangeetha",
       "filename": "sangeetha-FR-2026-040",
