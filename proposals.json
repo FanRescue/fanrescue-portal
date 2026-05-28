@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-041",
+      "client": "Nishad 380 Kenton",
+      "filename": "nishad-380-kenton-FR-2026-041",
+      "host": "proposals",
+      "category": "installation"
+    },
+    {
       "ref": "",
       "client": "Nishad 380 Kenton Fr 2026 017 (2)",
       "filename": "nishad-380-kenton-FR-2026-017 (2)",
