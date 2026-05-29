@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-042",
+      "client": "Mouchi",
+      "filename": "mouchi-FR-2026-042",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
       "ref": "FR-2026-041",
       "client": "Nishad 380 Kenton",
       "filename": "nishad-380-kenton-FR-2026-041",
