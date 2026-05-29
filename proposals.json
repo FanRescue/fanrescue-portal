@@ -2,6 +2,13 @@
   "proposals": [
     {
       "ref": "FR-2026-042",
+      "client": "Mowchi",
+      "filename": "mowchi-FR-2026-042",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
+      "ref": "FR-2026-042",
       "client": "Mouchi",
       "filename": "mouchi-FR-2026-042",
       "host": "quotes",
