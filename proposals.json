@@ -1,6 +1,27 @@
 {
   "proposals": [
     {
+      "ref": "",
+      "client": "Repair Replacement Template",
+      "filename": "repair-replacement-template",
+      "host": "quotes",
+      "category": "repair-replacement"
+    },
+    {
+      "ref": "",
+      "client": "Odour Assessment Template",
+      "filename": "odour-assessment-template",
+      "host": "quotes",
+      "category": "odour-assessment"
+    },
+    {
+      "ref": "",
+      "client": "Design Pack Template",
+      "filename": "design-pack-template",
+      "host": "quotes",
+      "category": "design-pack"
+    },
+    {
       "ref": "FR-2026-042",
       "client": "Mowchi",
       "filename": "mowchi-FR-2026-042",
