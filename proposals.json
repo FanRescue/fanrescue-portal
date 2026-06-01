@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-043",
+      "client": "Cevdet Mutlu",
+      "filename": "cevdet-mutlu-FR-2026-043",
+      "host": "quotes",
+      "category": "odour-assessment"
+    },
+    {
       "ref": "",
       "client": "Repair Replacement Template",
       "filename": "repair-replacement-template",
