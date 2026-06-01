@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-044",
+      "client": "Ark Group",
+      "filename": "ark-group-FR-2026-044",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
       "ref": "FR-2026-043",
       "client": "Cevdet Mutlu",
       "filename": "cevdet-mutlu-FR-2026-043",
