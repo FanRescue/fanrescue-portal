@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-046",
+      "client": "Haldirams",
+      "filename": "haldirams-FR-2026-046",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
       "ref": "FR-2026-045",
       "client": "Tallyman",
       "filename": "tallyman-FR-2026-045",
