@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-043",
+      "client": "Rania Food Services",
+      "filename": "rania-food-services-FR-2026-043",
+      "host": "proposals",
+      "category": "cleaning"
+    },
+    {
       "ref": "FR-2026-044",
       "client": "Ark Group",
       "filename": "ark-group-FR-2026-044",
