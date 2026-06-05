@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-048",
+      "client": "Three Falcons",
+      "filename": "three-falcons-FR-2026-048",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
       "ref": "FR-2026-047",
       "client": "Cloud Hammersmith",
       "filename": "cloud-hammersmith-FR-2026-047",
