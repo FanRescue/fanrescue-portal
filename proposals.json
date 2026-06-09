@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-049",
+      "client": "Shrimp And Wings",
+      "filename": "shrimp-and-wings-FR-2026-049",
+      "host": "proposals",
+      "category": "cleaning"
+    },
+    {
       "ref": "FR-2026-048",
       "client": "Three Falcons",
       "filename": "three-falcons-FR-2026-048",
