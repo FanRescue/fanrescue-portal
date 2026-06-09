@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-050",
+      "client": "Pizza Bellevue",
+      "filename": "pizza-bellevue-FR-2026-050",
+      "host": "proposals",
+      "category": "cleaning"
+    },
+    {
       "ref": "FR-2026-049",
       "client": "Shrimp And Wings",
       "filename": "shrimp-and-wings-FR-2026-049",
