@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-051",
+      "client": "Hello Watford Food Hall",
+      "filename": "hello-watford-food-hall-FR-2026-051",
+      "host": "proposals",
+      "category": "cleaning"
+    },
+    {
       "ref": "FR-2026-050",
       "client": "Pizza Bellevue",
       "filename": "pizza-bellevue-FR-2026-050",
