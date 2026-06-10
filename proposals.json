@@ -2,6 +2,13 @@
   "proposals": [
     {
       "ref": "FR-2026-051",
+      "client": "Alfi",
+      "filename": "alfi-FR-2026-051",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
+      "ref": "FR-2026-051",
       "client": "Hello Watford Food Hall",
       "filename": "hello-watford-food-hall-FR-2026-051",
       "host": "proposals",
