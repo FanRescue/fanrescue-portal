@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-052",
+      "client": "Chapel Chop House",
+      "filename": "chapel-chop-house-FR-2026-052",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
       "ref": "FR-2026-050",
       "client": "Chapel Chop House",
       "filename": "chapel-chop-house-FR-2026-050",
