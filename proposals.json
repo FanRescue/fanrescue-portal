@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-053",
+      "client": "Two Fold Studio",
+      "filename": "two-fold-studio-FR-2026-053",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
       "ref": "FR-2026-052",
       "client": "Chapel Chop House",
       "filename": "chapel-chop-house-FR-2026-052",
