@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-055",
+      "client": "257 Mare Street",
+      "filename": "257-mare-street-FR-2026-055",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
       "ref": "FR-2026-054",
       "client": "Pinnacle Mayfair",
       "filename": "pinnacle-mayfair-FR-2026-054",
