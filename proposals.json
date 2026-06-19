@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-056",
+      "client": "Survey Design",
+      "filename": "survey-design-FR-2026-056",
+      "host": "quotes",
+      "category": "design-pack"
+    },
+    {
       "ref": "FR-2026-055",
       "client": "257 Mare Street",
       "filename": "257-mare-street-FR-2026-055",
