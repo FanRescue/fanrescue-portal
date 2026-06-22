@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-057",
+      "client": "Angelina",
+      "filename": "angelina-FR-2026-057",
+      "host": "proposals",
+      "category": "cleaning"
+    },
+    {
       "ref": "FR-2026-056",
       "client": "Survey Design",
       "filename": "survey-design-FR-2026-056",
