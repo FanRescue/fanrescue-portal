@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-058",
+      "client": "Tces",
+      "filename": "tces-FR-2026-058",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
       "ref": "FR-2026-057",
       "client": "Angelina",
       "filename": "angelina-FR-2026-057",
