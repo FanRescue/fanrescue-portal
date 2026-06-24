@@ -2,6 +2,13 @@
   "proposals": [
     {
       "ref": "FR-2026-059",
+      "client": "Food In The Middle",
+      "filename": "food-in-the-middle-FR-2026-059",
+      "host": "proposals",
+      "category": "cleaning"
+    },
+    {
+      "ref": "FR-2026-059",
       "client": "Khaao Karachi",
       "filename": "khaao-karachi-FR-2026-059",
       "host": "proposals",
