@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-059",
+      "client": "Khaao Karachi",
+      "filename": "khaao-karachi-FR-2026-059",
+      "host": "proposals",
+      "category": "cleaning"
+    },
+    {
       "ref": "FR-2026-058",
       "client": "Tces",
       "filename": "tces-FR-2026-058",
