@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "",
+      "client": "Nishad 380 Kenton Fr 2026 041 Rev A",
+      "filename": "nishad-380-kenton-FR-2026-041-rev-a",
+      "host": "proposals",
+      "category": "installation"
+    },
+    {
       "ref": "FR-2026-059",
       "client": "Food In The Middle",
       "filename": "food-in-the-middle-FR-2026-059",
