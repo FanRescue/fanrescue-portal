@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-059",
+      "client": "Oma Coffee Roaster",
+      "filename": "oma-coffee-roaster-FR-2026-059",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
       "ref": "",
       "client": "Nishad 380 Kenton Fr 2026 041 Rev A",
       "filename": "nishad-380-kenton-FR-2026-041-rev-a",
