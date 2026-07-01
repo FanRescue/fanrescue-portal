@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-060",
+      "client": "12th Street Burger",
+      "filename": "12th-street-burger-FR-2026-060",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
       "ref": "FR-2026-059",
       "client": "Oma Coffee Roaster",
       "filename": "oma-coffee-roaster-FR-2026-059",
