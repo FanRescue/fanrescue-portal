@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-061",
+      "client": "Sanko Fa",
+      "filename": "sanko-fa-FR-2026-061",
+      "host": "proposals",
+      "category": "cleaning"
+    },
+    {
       "ref": "FR-2026-060",
       "client": "12th Street Burger",
       "filename": "12th-street-burger-FR-2026-060",
