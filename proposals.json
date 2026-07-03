@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-063",
+      "client": "Delta Court",
+      "filename": "delta-court-FR-2026-063",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
       "ref": "FR-2026-062",
       "client": "K Town",
       "filename": "k-town-FR-2026-062",
