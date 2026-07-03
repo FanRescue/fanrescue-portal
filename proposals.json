@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-062",
+      "client": "K Town",
+      "filename": "k-town-FR-2026-062",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
       "ref": "FR-2026-061",
       "client": "Sanko Fa",
       "filename": "sanko-fa-FR-2026-061",
