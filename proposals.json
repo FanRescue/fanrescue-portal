@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-065",
+      "client": "Fumi",
+      "filename": "fumi-FR-2026-065",
+      "host": "quotes",
+      "category": "repair-replacement"
+    },
+    {
       "ref": "FR-2026-064",
       "client": "Crazy Baker",
       "filename": "crazy-baker-FR-2026-064",
