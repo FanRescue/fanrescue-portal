@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "",
+      "client": "Goat Ltd Fr Cb 002",
+      "filename": "goat-ltd-FR-CB-002",
+      "host": "quotes",
+      "category": "uncategorised"
+    },
+    {
       "ref": "FR-2026-065",
       "client": "Fumi",
       "filename": "fumi-FR-2026-065",
