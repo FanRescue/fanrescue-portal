@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-066",
+      "client": "Shoreditch Nails",
+      "filename": "shoreditch-nails-FR-2026-066",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
       "ref": "",
       "client": "Shoreditch Nails Fr Cb 003",
       "filename": "shoreditch-nails-FR-CB-003",
