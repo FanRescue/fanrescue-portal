@@ -2,6 +2,13 @@
   "proposals": [
     {
       "ref": "",
+      "client": "Urban Greens Fr Cb 003",
+      "filename": "urban-greens-FR-CB-003",
+      "host": "proposals",
+      "category": "cleaning"
+    },
+    {
+      "ref": "",
       "client": "Goat Ltd Fr Cb 002",
       "filename": "goat-ltd-FR-CB-002",
       "host": "quotes",
