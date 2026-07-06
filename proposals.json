@@ -2,6 +2,13 @@
   "proposals": [
     {
       "ref": "",
+      "client": "Shoreditch Nails Fr Cb 002",
+      "filename": "shoreditch-nails-FR-CB-002",
+      "host": "quotes",
+      "category": "uncategorised"
+    },
+    {
+      "ref": "",
       "client": "Urban Greens Fr Cb 003",
       "filename": "urban-greens-FR-CB-003",
       "host": "proposals",
