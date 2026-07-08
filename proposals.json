@@ -2,6 +2,13 @@
   "proposals": [
     {
       "ref": "",
+      "client": "Huddle Cafe Fr Cb 006",
+      "filename": "huddle-cafe-FR-CB-006",
+      "host": "quotes",
+      "category": "uncategorised"
+    },
+    {
+      "ref": "",
       "client": "Huddle Cafe Fr Cb 005",
       "filename": "huddle-cafe-FR-CB-005",
       "host": "quotes",
