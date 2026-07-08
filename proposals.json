@@ -2,6 +2,13 @@
   "proposals": [
     {
       "ref": "",
+      "client": "Huddle Cafe Fr Cb 004",
+      "filename": "huddle-cafe-FR-CB-004",
+      "host": "quotes",
+      "category": "uncategorised"
+    },
+    {
+      "ref": "",
       "client": "Theatre Royal Stratford East Fr Cb 004",
       "filename": "theatre-royal-stratford-east-FR-CB-004",
       "host": "proposals",
