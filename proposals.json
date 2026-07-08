@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "",
+      "client": "Theatre Royal Stratford East Fr Cb 004",
+      "filename": "theatre-royal-stratford-east-FR-CB-004",
+      "host": "proposals",
+      "category": "cleaning"
+    },
+    {
       "ref": "FR-2026-066",
       "client": "Shoreditch Nails",
       "filename": "shoreditch-nails-FR-2026-066",
