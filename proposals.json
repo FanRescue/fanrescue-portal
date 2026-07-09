@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-068",
+      "client": "Lazeez Mayfair",
+      "filename": "lazeez-mayfair-FR-2026-068",
+      "host": "proposals",
+      "category": "cleaning"
+    },
+    {
       "ref": "FR-2026-067",
       "client": "Tces",
       "filename": "tces-FR-2026-067",
