@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "",
+      "client": "London Bridge Pub Fr Cb 004",
+      "filename": "london-bridge-pub-FR-CB-004",
+      "host": "proposals",
+      "category": "cleaning"
+    },
+    {
       "ref": "FR-2026-068",
       "client": "Lazeez Mayfair",
       "filename": "lazeez-mayfair-FR-2026-068",
