@@ -2,6 +2,13 @@
   "proposals": [
     {
       "ref": "",
+      "client": "Abc Restaurant Bar Fr Cb 004",
+      "filename": "abc-restaurant-bar-FR-CB-004",
+      "host": "proposals",
+      "category": "cleaning"
+    },
+    {
+      "ref": "",
       "client": "London Bridge Pub Fr Cb 004",
       "filename": "london-bridge-pub-FR-CB-004",
       "host": "proposals",
