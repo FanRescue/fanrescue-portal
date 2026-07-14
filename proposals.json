@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-070",
+      "client": "Shake Shack",
+      "filename": "shake-shack-FR-2026-070",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
       "ref": "FR-2026-066",
       "client": "Brixton Village",
       "filename": "brixton-village-FR-2026-066",
