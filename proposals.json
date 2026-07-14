@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-069",
+      "client": "Mitten House",
+      "filename": "mitten-house-FR-2026-069",
+      "host": "proposals",
+      "category": "cleaning"
+    },
+    {
       "ref": "",
       "client": "Abc Restaurant Bar Fr Cb 004",
       "filename": "abc-restaurant-bar-FR-CB-004",
