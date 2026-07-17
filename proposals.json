@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-073",
+      "client": "Brother Marcus",
+      "filename": "brother-marcus-FR-2026-073",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
       "ref": "FR-2026-072",
       "client": "Premal Babla",
       "filename": "premal-babla-FR-2026-072",
