@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-074",
+      "client": "Spitalfields Estate",
+      "filename": "spitalfields-estate-FR-2026-074",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
       "ref": "FR-2026-073",
       "client": "Brother Marcus",
       "filename": "brother-marcus-FR-2026-073",
