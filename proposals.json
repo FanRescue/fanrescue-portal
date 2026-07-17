@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-072",
+      "client": "Premal Babla",
+      "filename": "premal-babla-FR-2026-072",
+      "host": "quotes",
+      "category": "design-pack"
+    },
+    {
       "ref": "FR-2026-071",
       "client": "Santa Maria Pizzeria",
       "filename": "santa-maria-pizzeria-FR-2026-071",
