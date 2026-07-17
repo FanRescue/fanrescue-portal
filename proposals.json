@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-071",
+      "client": "Santa Maria Pizzeria",
+      "filename": "santa-maria-pizzeria-FR-2026-071",
+      "host": "proposals",
+      "category": "cleaning"
+    },
+    {
       "ref": "FR-2026-070",
       "client": "Shake Shack",
       "filename": "shake-shack-FR-2026-070",
