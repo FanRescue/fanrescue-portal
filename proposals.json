@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-075",
+      "client": "A1 Universe",
+      "filename": "a1-universe-FR-2026-075",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
       "ref": "FR-2026-074",
       "client": "Spitalfields Estate",
       "filename": "spitalfields-estate-FR-2026-074",
