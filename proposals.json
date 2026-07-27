@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-076",
+      "client": "Oodles Wok",
+      "filename": "oodles-wok-FR-2026-076",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
       "ref": "FR-2026-075",
       "client": "A1 Universe",
       "filename": "a1-universe-FR-2026-075",
