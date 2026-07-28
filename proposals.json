@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-078",
+      "client": "Sushi Moka",
+      "filename": "sushi-moka-FR-2026-078",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
       "ref": "FR-2026-077",
       "client": "Danny",
       "filename": "danny-FR-2026-077",
