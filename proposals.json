@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-079",
+      "client": "Colbeh",
+      "filename": "colbeh-FR-2026-079",
+      "host": "quotes",
+      "category": "design-pack"
+    },
+    {
       "ref": "FR-2026-078",
       "client": "Sushi Moka",
       "filename": "sushi-moka-FR-2026-078",
