@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-079",
+      "client": "Arya By Colbeh",
+      "filename": "arya-by-colbeh-FR-2026-079",
+      "host": "quotes",
+      "category": "design-pack"
+    },
+    {
       "ref": "",
       "client": "Lebz Camden Fr Cb 004",
       "filename": "lebz-camden-FR-CB-004",
