@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-080",
+      "client": "Tasty Greek Souvlaki",
+      "filename": "tasty-greek-souvlaki-FR-2026-080",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
       "ref": "FR-2026-079",
       "client": "Arya By Colbeh",
       "filename": "arya-by-colbeh-FR-2026-079",
