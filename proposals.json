@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "",
+      "client": "Sushi Moka Fr 2026 078a",
+      "filename": "sushi-moka-FR-2026-078A",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
       "ref": "FR-2026-080",
       "client": "173 Friar Street",
       "filename": "173-friar-street-FR-2026-080",
