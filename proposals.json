@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-081",
+      "client": "Sushi Haven",
+      "filename": "sushi-haven-FR-2026-081",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
       "ref": "",
       "client": "Sushi Moka Fr 2026 078a",
       "filename": "sushi-moka-FR-2026-078A",
