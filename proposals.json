@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-086",
+      "client": "Mason And Marlowe",
+      "filename": "mason-and-marlowe-FR-2026-086",
+      "host": "quotes",
+      "category": "design-pack"
+    },
+    {
       "ref": "FR-2026-085",
       "client": "Mason And Marlowe",
       "filename": "mason-and-marlowe-FR-2026-085",
