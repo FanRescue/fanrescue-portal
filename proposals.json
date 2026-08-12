@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-089",
+      "client": "Dawat Restaurant",
+      "filename": "dawat-restaurant-FR-2026-089",
+      "host": "proposals",
+      "category": "cleaning"
+    },
+    {
       "ref": "FR-2026-088",
       "client": "Heron Academy",
       "filename": "heron-academy-FR-2026-088",
