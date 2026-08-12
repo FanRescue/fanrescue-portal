@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-088",
+      "client": "Heron Academy",
+      "filename": "heron-academy-FR-2026-088",
+      "host": "proposals",
+      "category": "cleaning"
+    },
+    {
       "ref": "FR-2026-087",
       "client": "Salut",
       "filename": "salut-FR-2026-087",
