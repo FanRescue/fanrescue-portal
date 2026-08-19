@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-091",
+      "client": "Brixton Village Unit 18",
+      "filename": "brixton-village-unit-18-FR-2026-091",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
       "ref": "FR-2026-090",
       "client": "Brixton Village Unit 12",
       "filename": "brixton-village-unit-12-FR-2026-090",
