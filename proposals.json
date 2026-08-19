@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-090",
+      "client": "Brixton Village Unit 12",
+      "filename": "brixton-village-unit-12-FR-2026-090",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
       "ref": "FR-2026-089",
       "client": "Dawat Restaurant",
       "filename": "dawat-restaurant-FR-2026-089",
