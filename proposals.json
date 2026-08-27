@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-093",
+      "client": "Er Arch Design",
+      "filename": "er-arch-design-FR-2026-093",
+      "host": "quotes",
+      "category": "design-pack"
+    },
+    {
       "ref": "FR-2026-092",
       "client": "Rubrics",
       "filename": "rubrics-FR-2026-092",
