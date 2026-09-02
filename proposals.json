@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-094",
+      "client": "Bunga Bunga",
+      "filename": "bunga-bunga-FR-2026-094",
+      "host": "quotes",
+      "category": "repair-replacement"
+    },
+    {
       "ref": "",
       "client": "173 Friar Street Fr 2026 080 (1)",
       "filename": "173-friar-street-FR-2026-080 (1)",
