@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-097",
+      "client": "Maroush",
+      "filename": "maroush-FR-2026-097",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
       "ref": "FR-2026-096",
       "client": "Kotak",
       "filename": "kotak-FR-2026-096",
