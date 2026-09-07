@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-098",
+      "client": "Kanada Ya",
+      "filename": "kanada-ya-FR-2026-098",
+      "host": "quotes",
+      "category": "repair-replacement"
+    },
+    {
       "ref": "FR-2026-097",
       "client": "Maroush",
       "filename": "maroush-FR-2026-097",
