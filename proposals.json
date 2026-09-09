@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-099",
+      "client": "Black Bear Burger",
+      "filename": "black-bear-burger-FR-2026-099",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
       "ref": "FR-2026-098",
       "client": "Kanada Ya",
       "filename": "kanada-ya-FR-2026-098",
