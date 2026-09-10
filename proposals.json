@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "",
+      "client": "Maroush Fr 2026 097 Rev A",
+      "filename": "maroush-FR-2026-097-rev-a",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
       "ref": "FR-2026-099",
       "client": "Black Bear Burger",
       "filename": "black-bear-burger-FR-2026-099",
