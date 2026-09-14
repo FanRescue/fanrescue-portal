@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-100",
+      "client": "Hoebridge Golf Centre",
+      "filename": "hoebridge-golf-centre-FR-2026-100",
+      "host": "quotes",
+      "category": "repair-replacement"
+    },
+    {
       "ref": "",
       "client": "Maroush Fr 2026 097 Rev A",
       "filename": "maroush-FR-2026-097-rev-a",
