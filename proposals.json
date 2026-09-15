@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-102",
+      "client": "Hometipple",
+      "filename": "hometipple-FR-2026-102",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
       "ref": "FR-2026-101",
       "client": "Alan Wang",
       "filename": "alan-wang-FR-2026-101",
