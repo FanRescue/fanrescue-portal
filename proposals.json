@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-104",
+      "client": "Angelina Whiteley",
+      "filename": "angelina-whiteley-FR-2026-104",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
       "ref": "FR-2026-103",
       "client": "Zeia",
       "filename": "zeia-FR-2026-103",
