@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-106",
+      "client": "Angelina Shoreditch",
+      "filename": "angelina-shoreditch-FR-2026-106",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
       "ref": "FR-2026-105",
       "client": "Li Group",
       "filename": "li-group-FR-2026-105",
