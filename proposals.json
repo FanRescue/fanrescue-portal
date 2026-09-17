@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-108",
+      "client": "Joypark Westfield",
+      "filename": "joypark-westfield-FR-2026-108",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
       "ref": "FR-2026-107",
       "client": "Oak Caffe",
       "filename": "oak-caffe-FR-2026-107",
