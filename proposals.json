@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-107",
+      "client": "Oak Caffe",
+      "filename": "oak-caffe-FR-2026-107",
+      "host": "proposals",
+      "category": "cleaning"
+    },
+    {
       "ref": "FR-2026-106",
       "client": "Angelina Shoreditch",
       "filename": "angelina-shoreditch-FR-2026-106",
