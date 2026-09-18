@@ -2,6 +2,13 @@
   "proposals": [
     {
       "ref": "",
+      "client": "Maroush Fr 2026 097 Rev B",
+      "filename": "maroush-FR-2026-097-rev-b",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
+      "ref": "",
       "client": "Angelina Whiteley Fr 2026 104 Rev A",
       "filename": "angelina-whiteley-FR-2026-104-rev-a",
       "host": "quotes",
