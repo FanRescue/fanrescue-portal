@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-109",
+      "client": "Kee",
+      "filename": "kee-FR-2026-109",
+      "host": "quotes",
+      "category": "design-pack"
+    },
+    {
       "ref": "",
       "client": "Maroush Fr 2026 097 Rev B",
       "filename": "maroush-FR-2026-097-rev-b",
