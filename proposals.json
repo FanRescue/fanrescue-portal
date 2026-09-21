@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-111",
+      "client": "Rock Leopard Brewing",
+      "filename": "rock-leopard-brewing-FR-2026-111",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
       "ref": "FR-2026-110",
       "client": "Kee",
       "filename": "kee-FR-2026-110",
