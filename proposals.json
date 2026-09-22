@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-113",
+      "client": "Royal Wharf Aesthetics Academy",
+      "filename": "royal-wharf-aesthetics-academy-FR-2026-113",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
       "ref": "FR-2026-111",
       "client": "Rock Leopard Brewing",
       "filename": "rock-leopard-brewing-FR-2026-111",
