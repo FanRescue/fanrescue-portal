@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-112",
+      "client": "Humo",
+      "filename": "humo-FR-2026-112",
+      "host": "proposals",
+      "category": "cleaning"
+    },
+    {
       "ref": "FR-2026-114",
       "client": "195 Wood Lane",
       "filename": "195-wood-lane-FR-2026-114",
