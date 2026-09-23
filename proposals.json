@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-114",
+      "client": "195 Wood Lane",
+      "filename": "195-wood-lane-FR-2026-114",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
       "ref": "FR-2026-113",
       "client": "Royal Wharf Aesthetics Academy",
       "filename": "royal-wharf-aesthetics-academy-FR-2026-113",
