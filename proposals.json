@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "",
+      "client": "Rock Leopard Brewing Fr 2026 111 Rev A",
+      "filename": "rock-leopard-brewing-FR-2026-111-REV-A",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
       "ref": "FR-2026-112",
       "client": "Humo",
       "filename": "humo-FR-2026-112",
