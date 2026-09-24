@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-117",
+      "client": "Izumi",
+      "filename": "izumi-FR-2026-117",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
       "ref": "FR-2026-116",
       "client": "Mak Halal",
       "filename": "mak-halal-FR-2026-116",
