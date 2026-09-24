@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-116",
+      "client": "Mak Halal",
+      "filename": "mak-halal-FR-2026-116",
+      "host": "quotes",
+      "category": "repair-replacement"
+    },
+    {
       "ref": "FR-2026-115",
       "client": "Mike Bird",
       "filename": "mike-bird-FR-2026-115",
