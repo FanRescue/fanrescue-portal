@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "",
+      "client": "Zeia Fr 2026 103 Rev A",
+      "filename": "zeia-FR-2026-103-rev-a",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
       "ref": "FR-2026-117",
       "client": "Izumi",
       "filename": "izumi-FR-2026-117",
