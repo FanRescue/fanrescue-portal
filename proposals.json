@@ -2,6 +2,13 @@
   "proposals": [
     {
       "ref": "",
+      "client": "Joypark Westfield Fr 2026 108 Rev A",
+      "filename": "joypark-westfield-FR-2026-108-REV-A",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
+      "ref": "",
       "client": "Zeia Fr 2026 103 Rev A",
       "filename": "zeia-FR-2026-103-rev-a",
       "host": "quotes",
