@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-118",
+      "client": "River Gardens Unit 3",
+      "filename": "river-gardens-unit-3-FR-2026-118",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
       "ref": "",
       "client": "Joypark Westfield Fr 2026 108 Rev A",
       "filename": "joypark-westfield-FR-2026-108-REV-A",
