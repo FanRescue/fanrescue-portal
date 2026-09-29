@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-119",
+      "client": "Peckers",
+      "filename": "peckers-FR-2026-119",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
       "ref": "FR-2026-118",
       "client": "River Gardens Unit 3",
       "filename": "river-gardens-unit-3-FR-2026-118",
