@@ -1,6 +1,20 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-120",
+      "client": "Grodz Golders Green",
+      "filename": "grodz-golders-green-FR-2026-120",
+      "host": "proposals",
+      "category": "cleaning"
+    },
+    {
+      "ref": "FR-2026-121",
+      "client": "Grodz Edgware",
+      "filename": "grodz-edgware-FR-2026-121",
+      "host": "proposals",
+      "category": "cleaning"
+    },
+    {
       "ref": "FR-2026-119",
       "client": "Peckers",
       "filename": "peckers-FR-2026-119",
