@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "",
+      "client": "Joypark Westfield Fr 2026 108 Rev B",
+      "filename": "joypark-westfield-FR-2026-108-REV-B",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
       "ref": "FR-2026-122",
       "client": "Soraya",
       "filename": "soraya-FR-2026-122",
