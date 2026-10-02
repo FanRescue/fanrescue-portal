@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-125",
+      "client": "Maroush Beauchamp Place",
+      "filename": "maroush-beauchamp-place-FR-2026-125",
+      "host": "quotes",
+      "category": "repair-replacement"
+    },
+    {
       "ref": "FR-2026-123",
       "client": "105 109 Fieldgate Street",
       "filename": "105-109-fieldgate-street-FR-2026-123",
