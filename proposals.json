@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-126",
+      "client": "Sugar House Island",
+      "filename": "sugar-house-island-FR-2026-126",
+      "host": "quotes",
+      "category": "design-pack"
+    },
+    {
       "ref": "FR-2026-125",
       "client": "Maroush Beauchamp Place",
       "filename": "maroush-beauchamp-place-FR-2026-125",
