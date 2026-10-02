@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-123",
+      "client": "105 109 Fieldgate Street",
+      "filename": "105-109-fieldgate-street-FR-2026-123",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
       "ref": "",
       "client": "Joypark Westfield Fr 2026 108 Rev B",
       "filename": "joypark-westfield-FR-2026-108-REV-B",
