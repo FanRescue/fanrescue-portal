@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-127",
+      "client": "Fratelli Italian",
+      "filename": "fratelli-italian-FR-2026-127",
+      "host": "proposals",
+      "category": "cleaning"
+    },
+    {
       "ref": "FR-2026-126",
       "client": "Sugar House Island",
       "filename": "sugar-house-island-FR-2026-126",
