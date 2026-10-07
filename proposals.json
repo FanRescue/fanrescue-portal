@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-124",
+      "client": "Morleys Cowley",
+      "filename": "morleys-cowley-FR-2026-124",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
       "ref": "",
       "client": "Joypark Westfield Fr 2026 108 Rev C",
       "filename": "joypark-westfield-FR-2026-108-REV-C",
