@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "",
+      "client": "Joypark Westfield Fr 2026 108 Rev C",
+      "filename": "joypark-westfield-FR-2026-108-REV-C",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
       "ref": "FR-2026-127",
       "client": "Fratelli Italian",
       "filename": "fratelli-italian-FR-2026-127",
