@@ -1,6 +1,20 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-130",
+      "client": "Haldirams",
+      "filename": "haldirams-FR-2026-130",
+      "host": "quotes",
+      "category": "repair-replacement"
+    },
+    {
+      "ref": "FR-2026-128",
+      "client": "Haldirams",
+      "filename": "haldirams-FR-2026-128",
+      "host": "quotes",
+      "category": "repair-replacement"
+    },
+    {
       "ref": "FR-2026-124",
       "client": "Morleys Cowley",
       "filename": "morleys-cowley-FR-2026-124",
