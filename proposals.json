@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-129",
+      "client": "Haldirams",
+      "filename": "haldirams-FR-2026-129",
+      "host": "proposals",
+      "category": "cleaning"
+    },
+    {
       "ref": "FR-2026-130",
       "client": "Haldirams",
       "filename": "haldirams-FR-2026-130",
