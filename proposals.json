@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "",
+      "client": "Haldirams Fr 2026 128 Rev A",
+      "filename": "haldirams-FR-2026-128-rev-a",
+      "host": "quotes",
+      "category": "repair-replacement"
+    },
+    {
       "ref": "FR-2026-131",
       "client": "South Molton Street",
       "filename": "south-molton-street-FR-2026-131",
