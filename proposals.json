@@ -2,6 +2,13 @@
   "proposals": [
     {
       "ref": "",
+      "client": "Rock Leopard Brewing Fr 2026 111 Rev B",
+      "filename": "rock-leopard-brewing-FR-2026-111-REV-B",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
+      "ref": "",
       "client": "Joypark Westfield Fr 2026 108 Rev D",
       "filename": "joypark-westfield-FR-2026-108-REV-D",
       "host": "quotes",
