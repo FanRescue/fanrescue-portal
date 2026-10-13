@@ -2,6 +2,13 @@
   "proposals": [
     {
       "ref": "",
+      "client": "Joypark Westfield Fr 2026 108 Rev D",
+      "filename": "joypark-westfield-FR-2026-108-REV-D",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
+      "ref": "",
       "client": "Haldirams Fr 2026 128 Rev A",
       "filename": "haldirams-FR-2026-128-rev-a",
       "host": "quotes",
