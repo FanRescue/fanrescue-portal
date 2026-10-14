@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-134",
+      "client": "Excel Universe",
+      "filename": "excel-universe-FR-2026-134",
+      "host": "quotes",
+      "category": "repair-replacement"
+    },
+    {
       "ref": "FR-2026-133",
       "client": "367 Prince Regent Lane",
       "filename": "367-prince-regent-lane-FR-2026-133",
