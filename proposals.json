@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-135",
+      "client": "Liberty House",
+      "filename": "liberty-house-FR-2026-135",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
       "ref": "FR-2026-134",
       "client": "Excel Universe",
       "filename": "excel-universe-FR-2026-134",
