@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-133",
+      "client": "367 Prince Regent Lane",
+      "filename": "367-prince-regent-lane-FR-2026-133",
+      "host": "quotes",
+      "category": "design-pack"
+    },
+    {
       "ref": "",
       "client": "Rock Leopard Brewing Fr 2026 111 Rev B",
       "filename": "rock-leopard-brewing-FR-2026-111-REV-B",
