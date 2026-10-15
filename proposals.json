@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "",
+      "client": "Joypark Westfield Fr 2026 108 Rev E",
+      "filename": "joypark-westfield-FR-2026-108-REV-E",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
       "ref": "FR-2026-135",
       "client": "Liberty House",
       "filename": "liberty-house-FR-2026-135",
