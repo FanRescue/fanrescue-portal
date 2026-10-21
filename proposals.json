@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-140",
+      "client": "Maguro",
+      "filename": "maguro-FR-2026-140",
+      "host": "quotes",
+      "category": "repair-replacement"
+    },
+    {
       "ref": "FR-2026-139",
       "client": "Brother Marcus Canary Wharf",
       "filename": "brother-marcus-canary-wharf-FR-2026-139",
