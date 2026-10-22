@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "",
+      "client": "Maguro Fr 2026 140 Rev A",
+      "filename": "maguro-FR-2026-140-REV-A",
+      "host": "quotes",
+      "category": "repair-replacement"
+    },
+    {
       "ref": "FR-2026-140",
       "client": "Maguro",
       "filename": "maguro-FR-2026-140",
