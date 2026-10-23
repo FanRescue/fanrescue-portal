@@ -2,6 +2,13 @@
   "proposals": [
     {
       "ref": "",
+      "client": "Haldirams Fr 2026 132 Rev A",
+      "filename": "haldirams-FR-2026-132-rev-a",
+      "host": "proposals",
+      "category": "uncategorised"
+    },
+    {
+      "ref": "",
       "client": "Maguro Fr 2026 140 Rev A",
       "filename": "maguro-FR-2026-140-REV-A",
       "host": "quotes",
