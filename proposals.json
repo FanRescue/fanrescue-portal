@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-141",
+      "client": "Appalchia",
+      "filename": "appalchia-FR-2026-141",
+      "host": "proposals",
+      "category": "cleaning"
+    },
+    {
       "ref": "",
       "client": "Haldirams Fr 2026 132 Rev A",
       "filename": "haldirams-FR-2026-132-rev-a",
