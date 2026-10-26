@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-142",
+      "client": "Lezziz Charcoal Grill",
+      "filename": "lezziz-charcoal-grill-FR-2026-142",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
       "ref": "",
       "client": "Hectors Fine Wine Fr 2026 033 Rev A",
       "filename": "hectors-fine-wine-FR-2026-033-rev-a",
