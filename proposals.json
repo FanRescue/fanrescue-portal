@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-143",
+      "client": "Lune Wild",
+      "filename": "lune-wild-FR-2026-143",
+      "host": "quotes",
+      "category": "uncategorised"
+    },
+    {
       "ref": "FR-2026-142",
       "client": "Lezziz Charcoal Grill",
       "filename": "lezziz-charcoal-grill-FR-2026-142",
