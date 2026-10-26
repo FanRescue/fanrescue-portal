@@ -2,6 +2,13 @@
   "proposals": [
     {
       "ref": "",
+      "client": "Hectors Fine Wine Fr 2026 033 Rev A",
+      "filename": "hectors-fine-wine-FR-2026-033-rev-a",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
+      "ref": "",
       "client": "South Molton Street Fr 2026 131 Rev A",
       "filename": "south-molton-street-FR-2026-131-rev-a",
       "host": "quotes",
