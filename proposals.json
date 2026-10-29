@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-146",
+      "client": "Hampshire Harvest",
+      "filename": "hampshire-harvest-FR-2026-146",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
       "ref": "FR-2026-145",
       "client": "The Portman",
       "filename": "the-portman-FR-2026-145",
