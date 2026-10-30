@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-147",
+      "client": "Ruxandra",
+      "filename": "ruxandra-FR-2026-147",
+      "host": "quotes",
+      "category": "repair-replacement"
+    },
+    {
       "ref": "FR-2026-146",
       "client": "Hampshire Harvest",
       "filename": "hampshire-harvest-FR-2026-146",
