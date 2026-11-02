@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-148",
+      "client": "Koco Treat",
+      "filename": "koco-treat-FR-2026-148",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
       "ref": "FR-2026-147",
       "client": "Ruxandra",
       "filename": "ruxandra-FR-2026-147",
