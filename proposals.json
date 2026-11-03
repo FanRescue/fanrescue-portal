@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "",
+      "client": "Angelina Whiteley Fr 2026 104 Rev B",
+      "filename": "angelina-whiteley-FR-2026-104-rev-b",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
       "ref": "FR-2026-148",
       "client": "Koco Treat",
       "filename": "koco-treat-FR-2026-148",
