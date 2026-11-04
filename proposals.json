@@ -2,6 +2,13 @@
   "proposals": [
     {
       "ref": "",
+      "client": "Hectors Fine Wine Fr 2026 033 Rev C",
+      "filename": "hectors-fine-wine-FR-2026-033-rev-c",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
+      "ref": "",
       "client": "Hectors Fine Wine Fr 2026 033 Rev B",
       "filename": "hectors-fine-wine-FR-2026-033-rev-b",
       "host": "quotes",
