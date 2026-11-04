@@ -2,6 +2,13 @@
   "proposals": [
     {
       "ref": "",
+      "client": "Lune Wild Fr 2026 143 Rev A",
+      "filename": "lune-wild-FR-2026-143-rev-a",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
+      "ref": "",
       "client": "South Molton Street Fr 2026 131 Rev B",
       "filename": "south-molton-street-FR-2026-131-rev-b",
       "host": "quotes",
