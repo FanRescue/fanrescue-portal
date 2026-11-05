@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "",
+      "client": "Maroush Group Fr 2026 149 Rev A",
+      "filename": "maroush-group-FR-2026-149-rev-a",
+      "host": "proposals",
+      "category": "cleaning"
+    },
+    {
       "ref": "FR-2026-149",
       "client": "Maroush Group",
       "filename": "maroush-group-FR-2026-149",
