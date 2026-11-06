@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-150",
+      "client": "Lost Elephants Kitchen",
+      "filename": "lost-elephants-kitchen-FR-2026-150",
+      "host": "quotes",
+      "category": "design-pack"
+    },
+    {
       "ref": "",
       "client": "Maroush Group Fr 2026 149 Rev A",
       "filename": "maroush-group-FR-2026-149-rev-a",
