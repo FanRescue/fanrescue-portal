@@ -1,6 +1,13 @@
 {
   "proposals": [
     {
+      "ref": "FR-2026-151",
+      "client": "Tree Stone Nine Elms",
+      "filename": "tree-stone-nine-elms-FR-2026-151",
+      "host": "quotes",
+      "category": "installation"
+    },
+    {
       "ref": "FR-2026-150",
       "client": "Lost Elephants Kitchen",
       "filename": "lost-elephants-kitchen-FR-2026-150",
